@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://services.nirvanix.com/ws/IMFS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://services.nirvanix.com/ws/IMFS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://services.nirvanix.com/ws/IMFS">
+      <s:element name="ListFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folderPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sortCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sortDescending" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListFolderResult" type="tns:FSFolderList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FSFolderList">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFolderCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFileCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageFolderCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageFileCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folder" type="tns:ArrayOfFSFolderAttributes" />
+          <s:element minOccurs="0" maxOccurs="1" name="File" type="tns:ArrayOfFSFileAttributes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFSFolderAttributes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FSFolderAttributes" nillable="true" type="tns:FSFolderAttributes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FSFolderAttributes">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FSItemAttributes">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="FolderCount" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="FileCount" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="FSItemAttributes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Metadata" type="tns:XmlString" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileTags" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="XmlString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Xml" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FSFileAttributes">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FSItemAttributes">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="SizeBytes" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfFSFileAttributes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FSFileAttributes" nillable="true" type="tns:FSFileAttributes" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPathInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="showMetadata" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="showTags" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="showIsShared" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPathInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPathInfoResult" type="tns:PathInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PathInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FileSystemItem">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="SizeBytes" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="FileType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Metadata" type="tns:XmlString" />
+              <s:element minOccurs="0" maxOccurs="1" name="Tags" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsShared" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="ItemID" type="s:unsignedLong" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="FileSystemItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFile" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CopyFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srcFilePaths" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="destFolderPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CopyFilesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CopyFolders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srcFolderPaths" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="destFolderPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopyFoldersResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MoveFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srcFilePaths" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="destFolderPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFilesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateFolders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folderPaths" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFoldersResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MoveFolders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srcFolderPaths" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="destFolderPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFoldersResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUploadNode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sizeBytes" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUploadNodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUploadNodeResult" type="tns:UploadNode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UploadNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccessToken" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStorageNode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sizeBytes" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="restrictedIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStorageNodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStorageNodeResult" type="tns:StorageNode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StorageNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UploadHost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UploadToken" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStorageNodeExtended">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sizeBytes" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="consumerIP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ipRestricted" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="destFolderPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fileOverwrite" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="firstByteExpiration" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastByteExpiration" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStorageNodeExtendedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStorageNodeExtendedResult" type="tns:StorageNode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenameFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenameFileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RenameFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folderPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newFolderName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenameFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filePaths" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFilesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteFolders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folderPaths" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFoldersResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDownloadNodes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filePaths" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownloadNodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDownloadNodesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOptimalUrls">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filePaths" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="expiration" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="consumerIP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ipRestricted" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOptimalUrlsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOptimalUrlsResult" type="tns:ArrayOfDownload" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDownload">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Download" nillable="true" type="tns:Download" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Download">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DownloadHost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DownloadToken" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DownloadURL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDownloadLinks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filePaths" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="expiration" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="restrictedIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownloadLinksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDownloadLinksResult" type="tns:ArrayOfDownload" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchFileSystem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchTerm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="minFileSize" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxFileSize" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="minCreatedDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxCreatedDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxResults" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchFileSystemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchFileSystemResult" type="tns:SearchResults" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SearchResults">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SearchCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Item" type="tns:ArrayOfSearchItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSearchItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SearchItem" nillable="true" type="tns:SearchItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SearchItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ItemPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SizeBytes" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFile" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Sideload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="destFilePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callbackURL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SideloadResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:ListFolder" />
+  </wsdl:message>
+  <wsdl:message name="ListFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:ListFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPathInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPathInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPathInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPathInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopyFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:CopyFiles" />
+  </wsdl:message>
+  <wsdl:message name="CopyFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:CopyFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopyFoldersSoapIn">
+    <wsdl:part name="parameters" element="tns:CopyFolders" />
+  </wsdl:message>
+  <wsdl:message name="CopyFoldersSoapOut">
+    <wsdl:part name="parameters" element="tns:CopyFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveFiles" />
+  </wsdl:message>
+  <wsdl:message name="MoveFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFoldersSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFolders" />
+  </wsdl:message>
+  <wsdl:message name="CreateFoldersSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveFoldersSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveFolders" />
+  </wsdl:message>
+  <wsdl:message name="MoveFoldersSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUploadNodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUploadNode" />
+  </wsdl:message>
+  <wsdl:message name="GetUploadNodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUploadNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStorageNodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStorageNode" />
+  </wsdl:message>
+  <wsdl:message name="GetStorageNodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStorageNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStorageNodeExtendedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStorageNodeExtended" />
+  </wsdl:message>
+  <wsdl:message name="GetStorageNodeExtendedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStorageNodeExtendedResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenameFileSoapIn">
+    <wsdl:part name="parameters" element="tns:RenameFile" />
+  </wsdl:message>
+  <wsdl:message name="RenameFileSoapOut">
+    <wsdl:part name="parameters" element="tns:RenameFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenameFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:RenameFolder" />
+  </wsdl:message>
+  <wsdl:message name="RenameFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:RenameFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFiles" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFoldersSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFolders" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFoldersSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadNodesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDownloadNodes" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadNodesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDownloadNodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOptimalUrlsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOptimalUrls" />
+  </wsdl:message>
+  <wsdl:message name="GetOptimalUrlsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOptimalUrlsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadLinksSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDownloadLinks" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadLinksSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDownloadLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchFileSystemSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchFileSystem" />
+  </wsdl:message>
+  <wsdl:message name="SearchFileSystemSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchFileSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="SideloadSoapIn">
+    <wsdl:part name="parameters" element="tns:Sideload" />
+  </wsdl:message>
+  <wsdl:message name="SideloadSoapOut">
+    <wsdl:part name="parameters" element="tns:SideloadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMFSSoap">
+    <wsdl:operation name="ListFolder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists the specified folder.</wsdl:documentation>
+      <wsdl:input message="tns:ListFolderSoapIn" />
+      <wsdl:output message="tns:ListFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPathInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves attributes for the specified file or folder.</wsdl:documentation>
+      <wsdl:input message="tns:GetPathInfoSoapIn" />
+      <wsdl:output message="tns:GetPathInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFiles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Copies one or more files to a destination folder</wsdl:documentation>
+      <wsdl:input message="tns:CopyFilesSoapIn" />
+      <wsdl:output message="tns:CopyFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Copies one or more folders to a destination folder</wsdl:documentation>
+      <wsdl:input message="tns:CopyFoldersSoapIn" />
+      <wsdl:output message="tns:CopyFoldersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFiles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Moves one or more files to a destination folder</wsdl:documentation>
+      <wsdl:input message="tns:MoveFilesSoapIn" />
+      <wsdl:output message="tns:MoveFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates one or more folders</wsdl:documentation>
+      <wsdl:input message="tns:CreateFoldersSoapIn" />
+      <wsdl:output message="tns:CreateFoldersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFolders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Moves one or more folders to a destination folder</wsdl:documentation>
+      <wsdl:input message="tns:MoveFoldersSoapIn" />
+      <wsdl:output message="tns:MoveFoldersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadNode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the node to upload this file to.</wsdl:documentation>
+      <wsdl:input message="tns:GetUploadNodeSoapIn" />
+      <wsdl:output message="tns:GetUploadNodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageNode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the storage node to upload this file to.</wsdl:documentation>
+      <wsdl:input message="tns:GetStorageNodeSoapIn" />
+      <wsdl:output message="tns:GetStorageNodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageNodeExtended">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the storage node to upload file with advanced options.</wsdl:documentation>
+      <wsdl:input message="tns:GetStorageNodeExtendedSoapIn" />
+      <wsdl:output message="tns:GetStorageNodeExtendedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Renames a file</wsdl:documentation>
+      <wsdl:input message="tns:RenameFileSoapIn" />
+      <wsdl:output message="tns:RenameFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameFolder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Renames a folder</wsdl:documentation>
+      <wsdl:input message="tns:RenameFolderSoapIn" />
+      <wsdl:output message="tns:RenameFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFiles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes one or more files</wsdl:documentation>
+      <wsdl:input message="tns:DeleteFilesSoapIn" />
+      <wsdl:output message="tns:DeleteFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes one or more folders</wsdl:documentation>
+      <wsdl:input message="tns:DeleteFoldersSoapIn" />
+      <wsdl:output message="tns:DeleteFoldersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadNodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the current most optimum download nodes for the specified files.</wsdl:documentation>
+      <wsdl:input message="tns:GetDownloadNodesSoapIn" />
+      <wsdl:output message="tns:GetDownloadNodesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimalUrls">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the current most optimum download links for the specified files.</wsdl:documentation>
+      <wsdl:input message="tns:GetOptimalUrlsSoapIn" />
+      <wsdl:output message="tns:GetOptimalUrlsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadLinks">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the current most optimum download links for the specified files.</wsdl:documentation>
+      <wsdl:input message="tns:GetDownloadLinksSoapIn" />
+      <wsdl:output message="tns:GetDownloadLinksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchFileSystem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searchs for items in the file system.</wsdl:documentation>
+      <wsdl:input message="tns:SearchFileSystemSoapIn" />
+      <wsdl:output message="tns:SearchFileSystemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sideload">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Downloads remote content and stores it in a file</wsdl:documentation>
+      <wsdl:input message="tns:SideloadSoapIn" />
+      <wsdl:output message="tns:SideloadSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IMFSSoap" type="tns:IMFSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListFolder">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/ListFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPathInfo">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetPathInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFiles">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/CopyFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolders">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/CopyFolders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFiles">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/MoveFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolders">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/CreateFolders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFolders">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/MoveFolders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadNode">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetUploadNode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageNode">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetStorageNode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageNodeExtended">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetStorageNodeExtended" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameFile">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/RenameFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameFolder">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/RenameFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFiles">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/DeleteFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolders">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/DeleteFolders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadNodes">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetDownloadNodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimalUrls">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetOptimalUrls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadLinks">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetDownloadLinks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchFileSystem">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/SearchFileSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sideload">
+      <soap:operation soapAction="http://services.nirvanix.com/ws/IMFS/Sideload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IMFSSoap12" type="tns:IMFSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListFolder">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/ListFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPathInfo">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetPathInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFiles">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/CopyFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolders">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/CopyFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFiles">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/MoveFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolders">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/CreateFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFolders">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/MoveFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadNode">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetUploadNode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageNode">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetStorageNode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageNodeExtended">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetStorageNodeExtended" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameFile">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/RenameFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameFolder">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/RenameFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFiles">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/DeleteFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolders">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/DeleteFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadNodes">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetDownloadNodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimalUrls">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetOptimalUrls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadLinks">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/GetDownloadLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchFileSystem">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/SearchFileSystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sideload">
+      <soap12:operation soapAction="http://services.nirvanix.com/ws/IMFS/Sideload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IMFS">
+    <wsdl:port name="IMFSSoap" binding="tns:IMFSSoap">
+      <soap:address location="http://services.nirvanix.com/ws/IMFS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IMFSSoap12" binding="tns:IMFSSoap12">
+      <soap12:address location="http://services.nirvanix.com/ws/IMFS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

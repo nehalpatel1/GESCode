@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/bannerpics/dozer1.jpg</ImageUrl>
+    <NavigateUrl>~/ShantuiList.aspx?Category=Bulldozers</NavigateUrl>
+    <AlternateText>Dozer</AlternateText>
+    <Keyword>Dozer</Keyword>
+    <Caption>Dozer</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/dozer2.jpg</ImageUrl>
+    <NavigateUrl>~/ShantuiList.aspx?Category=Bulldozers</NavigateUrl>
+    <AlternateText>Dozer</AlternateText>
+    <Keyword>Dozer</Keyword>
+    <Caption>Dozer</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/dozer3.jpg</ImageUrl>
+    <NavigateUrl>~/ShantuiList.aspx?Category=Bulldozers</NavigateUrl>
+    <AlternateText>Dozer</AlternateText>
+    <Keyword>Dozer</Keyword>
+    <Caption>Dozer</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/Excavator.jpg</ImageUrl>
+    <NavigateUrl>~/ShantuiList.aspx?Category=Excavators</NavigateUrl>
+    <AlternateText>Excavator</AlternateText>
+    <Keyword>Excavator</Keyword>
+    <Caption>Excavator</Caption>   
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/Grader1.jpg</ImageUrl>
+    <NavigateUrl>~/ShantuiList.aspx?Category=Motor Graders</NavigateUrl>
+    <AlternateText>Grader</AlternateText>
+    <Keyword>Grader</Keyword>
+    <Caption>Grader</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/Grader2.jpg</ImageUrl>
+    <NavigateUrl>~/ShantuiList.aspx?Category=Motor Graders</NavigateUrl>
+    <AlternateText>Grader</AlternateText>
+    <Keyword>Grader</Keyword>
+    <Caption>Grader</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/Grader3.jpg</ImageUrl>
+    <NavigateUrl>~/ShantuiList.aspx?Category=Motor Graders</NavigateUrl>
+    <AlternateText>Grader</AlternateText>
+    <Keyword>Grader</Keyword>
+    <Caption>Grader</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/Grader4.jpg</ImageUrl>
+    <NavigateUrl>~/ShantuiList.aspx?Category=Motor Graders</NavigateUrl>
+    <AlternateText>Grader</AlternateText>
+    <Keyword>Grader</Keyword>
+    <Caption>Grader</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/Production.jpg</ImageUrl>
+    <NavigateUrl>~/Shantui.aspx</NavigateUrl>
+    <AlternateText>Grader</AlternateText>
+    <Keyword>Grader</Keyword>
+    <Caption>Grader</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/Roller.jpg</ImageUrl>
+    <NavigateUrl>~/ShantuiList.aspx?Category=Rollers</NavigateUrl>
+    <AlternateText>Grader</AlternateText>
+    <Keyword>Grader</Keyword>
+    <Caption>Grader</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/bannerpics/valuework.jpg</ImageUrl>
+    <NavigateUrl>~/Shantui.aspx</NavigateUrl>
+    <AlternateText>Grader</AlternateText>
+    <Keyword>Grader</Keyword>
+    <Caption>Grader</Caption>
+  </Ad>
+</Advertisements>

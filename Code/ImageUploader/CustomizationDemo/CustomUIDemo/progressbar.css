@@ -1,0 +1,19 @@
+.progress { height: 30px; position: relative; border: 1px solid; }
+
+.progress .progress-background { position: absolute; top: 0; left: 0; height: 100%; border: 0 none; border-right: 1px solid; width: 0; margin-right: -1px; }
+
+.progress .progress-caption { position: absolute; line-height: 30px; height: 100%; right: 50%; margin-right: -60px; }
+
+.progress-gray { border-color: #636363; }
+
+.progress-gray .progress-background { background-color: #aaa; border-right-color: #636363; }
+
+.progress-green { border-color: #81C076; }
+
+.progress-green .progress-background { background-color: #A3D3A3; border-right-color: #81C076; }
+
+.themes { padding: 0; list-style-type: none; }
+
+.themes li { float: left; }
+
+.themes li a { display: block; height: 30px; line-height: 30px; text-align: center; margin-right: 20px; padding: 5px; }

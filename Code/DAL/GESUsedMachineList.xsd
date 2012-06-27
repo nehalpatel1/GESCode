@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GESUsedMachineList" targetNamespace="http://tempuri.org/GESUsedMachineList.xsd" xmlns:mstns="http://tempuri.org/GESUsedMachineList.xsd" xmlns="http://tempuri.org/GESUsedMachineList.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ReportsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ReportsConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ReportsConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vUsedMachineListTableAdapter" GeneratorDataComponentClassName="vUsedMachineListTableAdapter" Name="vUsedMachineList" UserDataComponentName="vUsedMachineListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ReportsConnectionString (Web.config)" DbObjectName="dbo.vUsedMachineList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MachineID, MachineGrade, SerialNo, Year, Mileage, Location, SellPrice, Status, MachineTypeName, IndustryName, ModelName, ManufacturerName, PhotoUrl, MachineDescription, MachineTypeID, ModelID, ManufacturerID FROM dbo.vUsedMachineList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MachineID" DataSetColumn="MachineID" />
+              <Mapping SourceColumn="MachineGrade" DataSetColumn="MachineGrade" />
+              <Mapping SourceColumn="SerialNo" DataSetColumn="SerialNo" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Mileage" DataSetColumn="Mileage" />
+              <Mapping SourceColumn="Location" DataSetColumn="Location" />
+              <Mapping SourceColumn="SellPrice" DataSetColumn="SellPrice" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="MachineTypeName" DataSetColumn="MachineTypeName" />
+              <Mapping SourceColumn="IndustryName" DataSetColumn="IndustryName" />
+              <Mapping SourceColumn="ModelName" DataSetColumn="ModelName" />
+              <Mapping SourceColumn="ManufacturerName" DataSetColumn="ManufacturerName" />
+              <Mapping SourceColumn="PhotoUrl" DataSetColumn="PhotoUrl" />
+              <Mapping SourceColumn="MachineDescription" DataSetColumn="MachineDescription" />
+              <Mapping SourceColumn="MachineTypeID" DataSetColumn="MachineTypeID" />
+              <Mapping SourceColumn="ModelID" DataSetColumn="ModelID" />
+              <Mapping SourceColumn="ManufacturerID" DataSetColumn="ManufacturerID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GESUsedMachineList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GESUsedMachineList" msprop:Generator_UserDSName="GESUsedMachineList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vUsedMachineList" msprop:Generator_TableClassName="vUsedMachineListDataTable" msprop:Generator_TableVarName="tablevUsedMachineList" msprop:Generator_TablePropName="vUsedMachineList" msprop:Generator_RowDeletingName="vUsedMachineListRowDeleting" msprop:Generator_UserTableName="vUsedMachineList" msprop:Generator_RowChangingName="vUsedMachineListRowChanging" msprop:Generator_RowEvHandlerName="vUsedMachineListRowChangeEventHandler" msprop:Generator_RowDeletedName="vUsedMachineListRowDeleted" msprop:Generator_RowEvArgName="vUsedMachineListRowChangeEvent" msprop:Generator_RowChangedName="vUsedMachineListRowChanged" msprop:Generator_RowClassName="vUsedMachineListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MachineID" msprop:Generator_ColumnVarNameInTable="columnMachineID" msprop:Generator_ColumnPropNameInRow="MachineID" msprop:Generator_ColumnPropNameInTable="MachineIDColumn" msprop:Generator_UserColumnName="MachineID" type="xs:int" />
+              <xs:element name="MachineGrade" msprop:Generator_ColumnVarNameInTable="columnMachineGrade" msprop:Generator_ColumnPropNameInRow="MachineGrade" msprop:Generator_ColumnPropNameInTable="MachineGradeColumn" msprop:Generator_UserColumnName="MachineGrade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SerialNo" msprop:Generator_ColumnVarNameInTable="columnSerialNo" msprop:Generator_ColumnPropNameInRow="SerialNo" msprop:Generator_ColumnPropNameInTable="SerialNoColumn" msprop:Generator_UserColumnName="SerialNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mileage" msprop:Generator_ColumnVarNameInTable="columnMileage" msprop:Generator_ColumnPropNameInRow="Mileage" msprop:Generator_ColumnPropNameInTable="MileageColumn" msprop:Generator_UserColumnName="Mileage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SellPrice" msprop:Generator_ColumnVarNameInTable="columnSellPrice" msprop:Generator_ColumnPropNameInRow="SellPrice" msprop:Generator_ColumnPropNameInTable="SellPriceColumn" msprop:Generator_UserColumnName="SellPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MachineTypeName" msprop:Generator_ColumnVarNameInTable="columnMachineTypeName" msprop:Generator_ColumnPropNameInRow="MachineTypeName" msprop:Generator_ColumnPropNameInTable="MachineTypeNameColumn" msprop:Generator_UserColumnName="MachineTypeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndustryName" msprop:Generator_ColumnVarNameInTable="columnIndustryName" msprop:Generator_ColumnPropNameInRow="IndustryName" msprop:Generator_ColumnPropNameInTable="IndustryNameColumn" msprop:Generator_UserColumnName="IndustryName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModelName" msprop:Generator_ColumnVarNameInTable="columnModelName" msprop:Generator_ColumnPropNameInRow="ModelName" msprop:Generator_ColumnPropNameInTable="ModelNameColumn" msprop:Generator_UserColumnName="ModelName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ManufacturerName" msprop:Generator_ColumnVarNameInTable="columnManufacturerName" msprop:Generator_ColumnPropNameInRow="ManufacturerName" msprop:Generator_ColumnPropNameInTable="ManufacturerNameColumn" msprop:Generator_UserColumnName="ManufacturerName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhotoUrl" msprop:Generator_ColumnVarNameInTable="columnPhotoUrl" msprop:Generator_ColumnPropNameInRow="PhotoUrl" msprop:Generator_ColumnPropNameInTable="PhotoUrlColumn" msprop:Generator_UserColumnName="PhotoUrl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MachineDescription" msprop:Generator_ColumnVarNameInTable="columnMachineDescription" msprop:Generator_ColumnPropNameInRow="MachineDescription" msprop:Generator_ColumnPropNameInTable="MachineDescriptionColumn" msprop:Generator_UserColumnName="MachineDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MachineTypeID" msprop:Generator_ColumnVarNameInTable="columnMachineTypeID" msprop:Generator_ColumnPropNameInRow="MachineTypeID" msprop:Generator_ColumnPropNameInTable="MachineTypeIDColumn" msprop:Generator_UserColumnName="MachineTypeID" type="xs:int" />
+              <xs:element name="ModelID" msprop:Generator_ColumnVarNameInTable="columnModelID" msprop:Generator_ColumnPropNameInRow="ModelID" msprop:Generator_ColumnPropNameInTable="ModelIDColumn" msprop:Generator_UserColumnName="ModelID" type="xs:int" minOccurs="0" />
+              <xs:element name="ManufacturerID" msprop:Generator_ColumnVarNameInTable="columnManufacturerID" msprop:Generator_ColumnPropNameInRow="ManufacturerID" msprop:Generator_ColumnPropNameInTable="ManufacturerIDColumn" msprop:Generator_UserColumnName="ManufacturerID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vUsedMachineList" />
+      <xs:field xpath="mstns:MachineID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

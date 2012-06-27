@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- The key attribute used to link demo data to site node in Web.sitemap. -->
+<demos>
+	<demoGroup title="Image Uploader Express">
+		<demo key="basicdemo">
+			<shortDescription>
+				This simple application is a quick start demo with minimum settings.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This demo application is quick start demo with minimum set of settings.
+					The application demonstrates how to:
+				</p>
+				<ul>
+					<li>Upload files from client machines.</li>
+					<li>Receive files on server and put them to a destination folder.</li>
+					<li>Redirect to another page after successful upload.</li>
+				</ul>
+				<p>
+					After the upload process completes Image Uploader redirects you to a page containing
+					links to the uploaded files.
+				</p>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>, 
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="/BasicDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="/BasicDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/BasicDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/BasicDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/BasicDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/BasicDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/BasicDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/BasicDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/BasicDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/BasicDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="resizeimages">
+			<shortDescription>
+				Resize images client-side before uploading them.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This demo application demonstrates how Image Uploader can be used to resize images on
+					client machines before uploading them to the Web server. The following key features are
+					used in the application:
+				</p>
+				<ul>
+					<li>
+						Three thumbnails are prepared for each photo selected for upload (small, medium,
+						and large) and sent to the Web server.
+					</li>
+					<li>Image Uploader allows selecting only photo formats using file filter.</li>
+					<li>Photos are rotated automatically depending on EXIF information in the file.</li>
+				</ul>
+				<p class="license-description">
+					This demo application uses Image Uploader to create thumbnails client-side. Different 
+					editions of Image Uploader apply different limitations to output maximum thumbnail size: 
+					<strong>Express</strong> - 3Mpix. <strong>Professional</strong> - 5Mpix, 
+					<strong>Print</strong> - no limits, <strong>Premium</strong> - no limits.
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/ImageUploadDemo/ResizedPhotoUploadDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/ImageUploadDemo/ResizedPhotoUploadDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/ImageUploadDemo/ResizedPhotoUploadDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/ImageUploadDemo/ResizedPhotoUploadDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/ResizedPhotoUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/ResizedPhotoUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/ResizedPhotoUploadDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/ResizedPhotoUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/ResizedPhotoUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/ResizedPhotoUploadDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="cropimages">
+			<shortDescription>
+				Crop images client-side before uploading them.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This sample application demonstrates how to crop photos before upload. Suppose that your
+					Web application requires users to upload avatars to their accounts. This application
+					demonstrates how to perform it using Image Uploader. Just select one photo, crop it to
+					predefined aspect ratio and upload it. The application illustrates how to:
+				</p>
+				<ul>
+					<li>Configure Image Editor to crop images to predefined aspect ratio.</li>
+					<li>Setup Image Uploader to resizes images before upload.</li>
+					<li>Rotate photos automatically depending on EXIF information in the file.</li>
+					<li>
+						Configure Image Uploader to restrict number of files available for
+						upload per one upload session.
+					</li>
+				</ul>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>,
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/ImageUploadDemo/CroppedPhotoUploadDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/ImageUploadDemo/CroppedPhotoUploadDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/ImageUploadDemo/CroppedPhotoUploadDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/ImageUploadDemo/CroppedPhotoUploadDemo/Gallery.aspx.cs" />
+					<file name="croppedphotouploaddemo.js" location="~/ImageUploadDemo/CroppedPhotoUploadDemo/croppedphotouploaddemo.js" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/CroppedPhotoUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/CroppedPhotoUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/CroppedPhotoUploadDemo/gallery.php" />
+					<file name="croppedphotouploaddemo.js" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/CroppedPhotoUploadDemo/croppedphotouploaddemo.js" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/CroppedPhotoUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/CroppedPhotoUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/CroppedPhotoUploadDemo/gallery.php" />
+					<file name="croppedphotouploaddemo.js" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/CroppedPhotoUploadDemo/croppedphotouploaddemo.js" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="addingwatermark">
+			<shortDescription>
+				Apply watermarks on photos client-side before uploading them.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This demo application illustrates how to put watermarks on images uploaded with Image Uploader.
+					It places the text or image watermark to the bottom right corner of the image. Additionally,
+					in this demo you will see in action the following features:
+				</p>
+				<ul>
+					<li>Upload original image along with small thumbnail.</li>
+					<li>File filter.</li>
+				</ul>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>,
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/ImageUploadDemo/WatermarkDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/ImageUploadDemo/WatermarkDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/ImageUploadDemo/WatermarkDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/ImageUploadDemo/WatermarkDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/WatermarkDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/WatermarkDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/WatermarkDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/WatermarkDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/WatermarkDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/WatermarkDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="extractexif">
+			<shortDescription>
+				This sample application demonstrates how to extract EXIF metadata from photos using Image Uploader.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					In this demo application users can upload photos to a Web site and then view places
+					where images were made on Google Maps:
+				</p>
+				<ul>
+					<li>Extract and pass geographical information stored in EXIF to server.</li>
+					<li>Create and send high and low resolution thumbnails along with original image.</li>
+					<li>Add a comment to every uploaded image.</li>
+				</ul>
+				<p>
+					Make sure that photos selected to upload have GPS data in EXIF.
+				</p>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>,
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/ImageUploadDemo/ExifDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/ImageUploadDemo/ExifDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/ImageUploadDemo/ExifDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/ImageUploadDemo/ExifDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/ExifDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/ExifDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/ImageUploadDemo/ExifDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/ExifDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/ExifDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/ImageUploadDemo/ExifDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="uploadfolders">
+			<shortDescription>
+				Upload not only files but entire folders using Image Uploader.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This sample application demonstrates how to enable upload of entire folders with Image Uploader.
+					The application restores uploaded folders server-side and allows users to navigate through
+					uploaded files and folders after upload completes.
+				</p>
+				<p class="license-description">
+					This demo application works with <strong>Professional</strong>, <strong>Print</strong>, 
+					or <strong>Premium</strong> edition of Image Uploader.
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/FileUploadDemo/FoldersUploadDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/FileUploadDemo/FoldersUploadDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/FileUploadDemo/FoldersUploadDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/FileUploadDemo/FoldersUploadDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/FileUploadDemo/FoldersUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/FileUploadDemo/FoldersUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/FileUploadDemo/FoldersUploadDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/FileUploadDemo/FoldersUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/FileUploadDemo/FoldersUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/FileUploadDemo/FoldersUploadDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="auxiliarydata">
+			<shortDescription>
+				This application demonstrates how to pass additional data along with uploaded files.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This sample application demonstrates how to pass additional data required by a Web site
+					along with files uploaded with Image Uploader. Just specify server-side folder name where
+					to save the uploaded files and Image Uploader will upload files there. The application
+					illustrates the following key feature:
+				</p>
+				<ul>
+					<li>Uploading additional data in HTTP POST fields.</li>
+					<li>
+						Getting user descriptions uploaded along with files. Specify descriptions for several
+						files and they will be uploaded to a Web server.
+					</li>
+				</ul>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>,
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/FileUploadDemo/AuxiliaryDataUploadDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/FileUploadDemo/AuxiliaryDataUploadDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/FileUploadDemo/AuxiliaryDataUploadDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/FileUploadDemo/AuxiliaryDataUploadDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/FileUploadDemo/FoldersUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/FileUploadDemo/FoldersUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/FileUploadDemo/FoldersUploadDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/FileUploadDemo/FoldersUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/FileUploadDemo/FoldersUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/FileUploadDemo/FoldersUploadDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="reliableupload">
+			<shortDescription>
+				The application shows how to set up Image Uploader to make upload process stable in the case of problems with Internet connection.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					Sometimes connection problems occur unexpectedly during uploading files to a Web server.
+					This sample application demonstrates how to set up Image Uploader to recover the upload process.
+					The approach requires Image Uploader to send each file by chunks in multiple HTTP POST requests.
+					Also we specify how many attempts Image Uploader performs in order to resume upload of the current
+					chunk and period of time between these attempts. Here are the key features used in the application:
+				</p>
+				<ul>
+					<li>Upload of files by chunks of fixed size in multiple HTTP POST requests.</li>
+					<li>Resume upload automatically when connection breaks.</li>
+					<li>
+						Upload of MD5 hash values for selected files. This feature allows us to check
+						whether files added to the upload list have already been uploaded to the Web server or not.
+					</li>
+				</ul>
+				<p class="license-description">
+					This demo application works with <strong>Professional</strong>, <strong>Print</strong>, or
+					<strong>Premium</strong> edition of Image Uploader.
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/FileUploadDemo/FailSafeUploadDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/FileUploadDemo/FailSafeUploadDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/FileUploadDemo/FailSafeUploadDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/FileUploadDemo/FailSafeUploadDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/FileUploadDemo/FailSafeUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/FileUploadDemo/FailSafeUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/FileUploadDemo/FailSafeUploadDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/FileUploadDemo/FailSafeUploadDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/FileUploadDemo/FailSafeUploadDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/FileUploadDemo/FailSafeUploadDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="localization">
+			<shortDescription>
+				Translate Image Uploader to various languages.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This demo application demonstrates how to use Image Uploader on international websites
+					when several languages should be supported.
+				</p>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>,
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/CustomizationDemo/LocalizationDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/CustomizationDemo/LocalizationDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/CustomizationDemo/LocalizationDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/CustomizationDemo/LocalizationDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CustomizationDemo/LocalizationDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CustomizationDemo/LocalizationDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CustomizationDemo/LocalizationDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CustomizationDemo/LocalizationDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CustomizationDemo/LocalizationDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CustomizationDemo/LocalizationDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="restrictions">
+			<shortDescription>
+				Restrict files that can be uploaded.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This sample application demonstrates how to specify restrictions on the files before uploading
+					them to a Web server, such as:
+				</p>
+				<ul>
+					<li>Filtering files by names and types.</li>
+					<li>Limitations to image dimensions and disabling CMYK images.</li>
+					<li>Setting limitations to single file size, number of uploaded files and total upload size.</li>
+				</ul>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>,
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/CustomizationDemo/FileRestrictionsDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/CustomizationDemo/FileRestrictionsDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/CustomizationDemo/FileRestrictionsDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/CustomizationDemo/FileRestrictionsDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CustomizationDemo/FileRestrictionsDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CustomizationDemo/FileRestrictionsDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CustomizationDemo/FileRestrictionsDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CustomizationDemo/FileRestrictionsDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CustomizationDemo/FileRestrictionsDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CustomizationDemo/FileRestrictionsDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="customuidemo">
+			<shortDescription>
+				Customize Image Uploader colors, fonts, icons, and buttons.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This sample application demonstrates how to customize user interface of Image Uploader and
+					how to implement custom progress bar which shows approximate status of upload process.
+				</p>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>,
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/CustomizationDemo/CustomUIDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/CustomizationDemo/CustomUIDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/CustomizationDemo/CustomUIDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/CustomizationDemo/CustomUIDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CustomizationDemo/CustomUIDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CustomizationDemo/CustomUIDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CustomizationDemo/CustomUIDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CustomizationDemo/CustomUIDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CustomizationDemo/CustomUIDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CustomizationDemo/CustomUIDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="photooptimization">
+			<shortDescription>
+				Optimize photos for specified print size before uploading them.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This sample application demonstrates how to optimize photos for different print sizes with
+					Image Uploader. You just specify on what paper size photos are going to be printed, after that
+					the application calculaltes optimal image size, and Image Uploader resizes images to this size
+					before upload them. This approach allows reducing amount of traffic sent from client machines
+					to a Web server. Also the application enables quality meter to indicate whether photos are
+					suitable for printing on the specified paper size. Another Image Uploader features demonstrated
+					here are:
+				</p>
+				<ul>
+					<li>Copying EXIF data from original to optimized photo.</li>
+					<li>Automatic rotation of photos depending on EXIF information in the file.</li>
+					<li>Changing thumbnail size dynamically at run-time.</li>
+					<li>Setting quality meter settings dynamically at run-time.</li>
+				</ul>
+				<p class="license-description">
+					This demo application works with <strong>Print</strong> or <strong>Premium</strong> edition of Image Uploader.
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/PhotoBusinessDemo/PhotoOptimizationDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/PhotoBusinessDemo/PhotoOptimizationDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/PhotoBusinessDemo/PhotoOptimizationDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/PhotoBusinessDemo/PhotoOptimizationDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/PhotoBusinessDemo/PhotoOptimizationDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/PhotoBusinessDemo/PhotoOptimizationDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/PhotoBusinessDemo/PhotoOptimizationDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/PhotoBusinessDemo/PhotoOptimizationDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/PhotoBusinessDemo/PhotoOptimizationDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/PhotoBusinessDemo/PhotoOptimizationDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="photoorder">
+			<shortDescription>
+				The application demonstrates how Image Uploader can be used to build a photo order cart.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This demo is a photo print ordering application which allows users to select photos,
+					choose print format, paper type, and a number of copies, and upload these photos
+					with order information to the server. In this demo you will see how to:
+				</p>
+				<ul>
+					<li>Upload source file with thumbnails to the server.</li>
+					<li>Use quality meter.</li>
+					<li>Filter files by extension.</li>
+				</ul>
+				<p class="license-description">
+					This demo application works with <strong>Print</strong> or <strong>Premium</strong> edition 
+					of Image Uploader.
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/PhotoBusinessDemo/PhotoOrderDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/PhotoBusinessDemo/PhotoOrderDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/PhotoBusinessDemo/PhotoOrderDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/PhotoBusinessDemo/PhotoOrderDemo/Gallery.aspx.cs" />
+					<file name="photoorder.js" location="~/PhotoBusinessDemo/PhotoOrderDemo/photoorder.js" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/PhotoBusinessDemo/PhotoOrderDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/PhotoBusinessDemo/PhotoOrderDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/PhotoBusinessDemo/PhotoOrderDemo/gallery.php" />
+					<file name="photoorder.js" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/PhotoBusinessDemo/PhotoOrderDemo/photoorder.js" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/PhotoBusinessDemo/PhotoOrderDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/PhotoBusinessDemo/PhotoOrderDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/PhotoBusinessDemo/PhotoOrderDemo/gallery.php" />
+					<file name="photoorder.js" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/PhotoBusinessDemo/PhotoOrderDemo/photoorder.js" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="amazons3">
+			<shortDescription>
+				Upload files to Amazon S3 cloud storage
+			</shortDescription>
+			<fullDescription>
+				<p>
+					Upload files to Amazon S3 cloud storage using Image Uploader.
+				</p>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>,
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/CloudStorageDemo/AmazonS3Demo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/CloudStorageDemo/AmazonS3Demo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/CloudStorageDemo/AmazonS3Demo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/CloudStorageDemo/AmazonS3Demo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CloudStorageDemo/AmazonS3Demo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CloudStorageDemo/AmazonS3Demo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CloudStorageDemo/AmazonS3Demo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CloudStorageDemo/AmazonS3Demo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CloudStorageDemo/AmazonS3Demo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CloudStorageDemo/AmazonS3Demo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="nirvanix">
+			<shortDescription>
+				Upload files to Nirvanix cloud storage using Image Uploader.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This demo shows how to use <em>NirvanixExtender</em> to upload files to Nirvanix.
+				</p>
+				<p class="license-description">
+					This demo application works with any edition of Image Uploader (<strong>Express</strong>,
+					<strong>Professional</strong>, <strong>Print</strong>, and <strong>Premium</strong>).
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/CloudStorageDemo/NirvanixDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/CloudStorageDemo/NirvanixDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/CloudStorageDemo/NirvanixDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/CloudStorageDemo/NirvanixDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CloudStorageDemo/NirvanixDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CloudStorageDemo/NirvanixDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/CloudStorageDemo/NirvanixDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CloudStorageDemo/NirvanixDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CloudStorageDemo/NirvanixDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/CloudStorageDemo/NirvanixDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="multipledescriptions">
+			<shortDescription>
+				This demo illustrates how to create a custom upload pane via HTML/JavaScript.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This demo application shows to create custom upload pane through HTML code.
+					This custom pane allows to associate additional data with each data - file
+					title and description. It can be easily modified to send any other data.
+				</p>
+				<p class="license-description">
+					This demo application works with <strong>Professional</strong>, <strong>Print</strong>, or 
+					<strong>Premium</strong> edition of Image Uploader.
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/MultipleDescriptionsDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/MultipleDescriptionsDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/MultipleDescriptionsDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/MultipleDescriptionsDemo/Gallery.aspx.cs" />
+					<file name="MultipleDescriptions.js" location="~/MultipleDescriptionsDemo/MultipleDescriptions.js" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/MultipleDescriptionsDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/MultipleDescriptionsDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/MultipleDescriptionsDemo/gallery.php" />
+					<file name="multipledescriptions.js" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/MultipleDescriptionsDemo/multipledescriptions.js" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/MultipleDescriptionsDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/MultipleDescriptionsDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/MultipleDescriptionsDemo/gallery.php" />
+					<file name="multipledescriptions.js" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/MultipleDescriptionsDemo/multipledescriptions.js" />
+				</platform>
+			</files>
+		</demo>
+		<demo key="multistepwizard">
+			<shortDescription>
+				Put Image Uploader to multi-step wizard on your Web site.
+			</shortDescription>
+			<fullDescription>
+				<p>
+					This sample application demonstrates how to add Image Uploader to mutli-step wizard
+					where one of steps accepts files uploaded from client computers. The following key
+					features are illustrated in this application:
+				</p>
+				<ul>
+					<li>Put Image Uploader to multi-step wizard logic.</li>
+					<li>Hide Image Uploader on a HTML page without losing list of files selected for upload.</li>
+					<li>Upload of files selected in Image Uploader without displaying the component.</li>
+				</ul>
+				<p class="license-description">
+					This demo application works with <strong>Professional</strong>, <strong>Print</strong>, or 
+					<strong>Premium</strong> edition of Image Uploader.
+				</p>
+			</fullDescription>
+			<files>
+				<platform title="ASP.NET - C#">
+					<file name="default.aspx" location="~/WizardDemo/Default.aspx" />
+					<file name="default.aspx.cs" location="~/WizardDemo/Default.aspx.cs" />
+					<file name="gallery.aspx" location="~/WizardDemo/Gallery.aspx" />
+					<file name="gallery.aspx.cs" location="~/WizardDemo/Gallery.aspx.cs" />
+				</platform>
+				<platform title="PHP">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/WizardDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/WizardDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderPHP/WizardDemo/gallery.php" />
+				</platform>
+				<platform title="JavaScript">
+					<file name="index.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/WizardDemo/index.php" />
+					<file name="upload.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/WizardDemo/upload.php" />
+					<file name="gallery.php" location="~/_DemoPortal/SourceCode/PHP/Samples_ImageUploaderJavaScript/WizardDemo/gallery.php" />
+				</platform>
+			</files>
+		</demo>
+	</demoGroup>
+</demos>

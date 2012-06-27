@@ -1,0 +1,7 @@
+CREATE DATABASE GES ON
+
+( FILENAME = N'C:\C Drive\Code\GESEquipmentTrade\GESEquipmentTrade\App_Data\GES.mdf' ),
+
+( FILENAME = N'C:\C Drive\Code\GESEquipmentTrade\GESEquipmentTrade\App_Data\GES_log.LDF' )
+
+FOR ATTACH

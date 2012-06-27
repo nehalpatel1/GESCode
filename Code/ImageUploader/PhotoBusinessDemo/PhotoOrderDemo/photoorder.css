@@ -1,0 +1,44 @@
+.demo .uploader, .demo .sidebar { height: 520px; border: solid 1px #eee; border-bottom: solid 1px #ddd; border-right: solid 1px #ddd; background: #fafafa; }
+
+.demo .uploader { margin-right: 260px; }
+
+.demo .sidebar { width: 230px; float: right; margin: 0; padding: 0; }
+
+.thumbnail-note { padding: 5px 10px; }
+
+.thumbnail { border: 1px solid #bbbbbb; margin: 0 auto; width: 210px; }
+
+.nav { margin: 0 auto; width: 210px; }
+
+.nav a.disabled, .nav a.disabled:hover, .nav a.disabled:link, .nav a.disabled:visited { color: #bbbbbb; text-decoration: none; }
+
+.nav .nav-prev { float: left; }
+
+.nav .nav-next { float: right; }
+
+.nav .clear { clear: both; }
+
+.attrs { margin-top: 20px; }
+
+.attrs table { margin: 0 auto; }
+
+.attr-field { margin-right: 5px; width: 50px; }
+
+.attr-size { width: 60px; }
+
+.attr-paper { width: 70px; }
+
+.attr-quantity { width: 30px; }
+
+.numeric-button { border: 0 none; font-size: 8px; margin: 0; padding: 0; }
+
+.buttons { margin-top: 10px; text-align: center !important; }
+
+.buttons button { height: 40px; margin: 5px 10px; min-width: 185px; padding: 5px; }
+
+.legend { text-align: left; margin-top: 10px; }
+
+.legend > p { padding: 5px 0; }
+
+.legend > p > span { display: block; float: left; width: 10px; height: 15px; border: 1px solid #000; margin-right: 10px; }
+

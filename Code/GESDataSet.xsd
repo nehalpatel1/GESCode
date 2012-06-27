@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GESDataSet" targetNamespace="http://tempuri.org/GESDataSet.xsd" xmlns:mstns="http://tempuri.org/GESDataSet.xsd" xmlns="http://tempuri.org/GESDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ReportsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ReportsConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ReportsConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vCounterListTableAdapter" GeneratorDataComponentClassName="vCounterListTableAdapter" Name="vCounterList" UserDataComponentName="vCounterListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ReportsConnectionString (Web.config)" DbObjectName="dbo.vCounterList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DateInserted, ExecutionPath, NumberOfHits FROM dbo.vCounterList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DateInserted" DataSetColumn="DateInserted" />
+              <Mapping SourceColumn="ExecutionPath" DataSetColumn="ExecutionPath" />
+              <Mapping SourceColumn="NumberOfHits" DataSetColumn="NumberOfHits" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GESDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GESDataSet" msprop:Generator_UserDSName="GESDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vCounterList" msprop:Generator_TableClassName="vCounterListDataTable" msprop:Generator_TableVarName="tablevCounterList" msprop:Generator_TablePropName="vCounterList" msprop:Generator_RowDeletingName="vCounterListRowDeleting" msprop:Generator_UserTableName="vCounterList" msprop:Generator_RowChangingName="vCounterListRowChanging" msprop:Generator_RowEvHandlerName="vCounterListRowChangeEventHandler" msprop:Generator_RowDeletedName="vCounterListRowDeleted" msprop:Generator_RowEvArgName="vCounterListRowChangeEvent" msprop:Generator_RowChangedName="vCounterListRowChanged" msprop:Generator_RowClassName="vCounterListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateInserted" msprop:Generator_ColumnVarNameInTable="columnDateInserted" msprop:Generator_ColumnPropNameInRow="DateInserted" msprop:Generator_ColumnPropNameInTable="DateInsertedColumn" msprop:Generator_UserColumnName="DateInserted" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExecutionPath" msprop:Generator_ColumnVarNameInTable="columnExecutionPath" msprop:Generator_ColumnPropNameInRow="ExecutionPath" msprop:Generator_ColumnPropNameInTable="ExecutionPathColumn" msprop:Generator_UserColumnName="ExecutionPath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumberOfHits" msprop:Generator_ColumnVarNameInTable="columnNumberOfHits" msprop:Generator_ColumnPropNameInRow="NumberOfHits" msprop:Generator_ColumnPropNameInTable="NumberOfHitsColumn" msprop:Generator_UserColumnName="NumberOfHits" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

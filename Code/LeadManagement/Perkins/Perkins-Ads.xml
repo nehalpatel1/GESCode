@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>images/perkins-cat-engine.jpg</ImageUrl>
+    <AlternateText>perkins-cat-engine</AlternateText>
+    <Keyword>perkins-cat-engine</Keyword>
+    <Caption>perkins-cat-engine</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>images/Perkins-Engine-Parts.jpg</ImageUrl>
+    <AlternateText>Perkins-Engine-Parts</AlternateText>
+    <Keyword>Perkins-Engine-Parts</Keyword>
+    <Caption>Perkins-Engine-Parts</Caption>
+  </Ad>
+</Advertisements>

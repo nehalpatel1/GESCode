@@ -1,0 +1,42 @@
+.map {
+    margin-right: 260px;
+}
+
+#map_canvas {
+    height: 550px;
+    font-size: 10pt;
+}
+
+.sidebar-gallery {
+    float: right;
+    width: 250px;
+}
+
+.sidebar-gallery .gallery-image-list li.item {
+    cursor: pointer;
+		display: block;
+		width: auto;
+}
+
+.sidebar-gallery .gallery-image-list li.selected, .sidebar-gallery .gallery-image-list li:hover {
+    background-color: #F3F3F3;
+}
+
+.sidebar-gallery .gallery-image-list .item .preview {
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+}
+
+.gallery-image-list .item .data {
+	margin: 0;
+}
+
+.sidebar-gallery .gallery-image-list .item h3 {
+    padding: 0 0 5px;
+    font-size: 120%;
+}
+
+.sidebar-gallery .gallery-image-list .item p {
+    padding: 0;
+}

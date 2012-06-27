@@ -1,0 +1,19 @@
+.ui-tabs .ui-tabs-hide { display: block !important; visibility: hidden !important; height: 0 !important; padding: 0 !important; margin: 0 !important; width: 10px !important; }
+
+.demo .content-block .row input[type=text], .demo .content-block .row select { min-width: 200px; }
+
+.nav { text-align: right; width: auto; margin-top: 20px; }
+
+#progressbar { margin-right: 100px; }
+
+#uploadButton { float: right; }
+
+.content .ui-widget { font-family: "Trebuchet MS" , Tahoma, sans-serif; font-size: 14px; }
+
+.content .ui-widget .ui-widget { font-size: 14px; }
+
+.content .ui-widget input, .content .ui-widget select, .content .ui-widget textarea, .content .ui-widget button { font-family: "Trebuchet MS" , Tahoma, sans-serif; font-size: 14px; }
+
+.thumbnail-item-outer { display: inline-block; max-height: 170px; max-width: 110px; overflow: hidden; margin: 5px; vertical-align: top; }
+
+.thumbnail-item-outer .thumbnail-item-description, .gallery-image-list li { text-align: center; }

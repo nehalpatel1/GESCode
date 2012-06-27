@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE720ED7-05C3-4040-88C6-1338C71039B9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelloGES</RootNamespace>
+    <AssemblyName>HelloGES</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>false</PublishDatabases>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdWords">
+      <HintPath>..\..\ASP.net - Learning\awapi_dotnet_lib_src_12.4.0\examples\csharp\bin\Debug\AdWords.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.ImageUploader, Version=7.0.35.21392, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ImageUploader\Bin\Aurigma.ImageUploader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\PasswordRecovery.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="AddUsedEquipment.aspx" />
+    <Content Include="App_Data\GES.mdf" />
+    <Content Include="App_Data\GES_log.LDF">
+      <DependentUpon>GES.mdf</DependentUpon>
+    </Content>
+    <Content Include="BannerPics\140H-Rim-for-sale.gif" />
+    <Content Include="BannerPics\advertise-banner.jpg" />
+    <Content Include="BannerPics\August-Banner.gif" />
+    <Content Include="BannerPics\Dozer1.jpg" />
+    <Content Include="BannerPics\Dozer2.jpg" />
+    <Content Include="BannerPics\Dozer3.jpg" />
+    <Content Include="BannerPics\Excavator.jpg" />
+    <Content Include="BannerPics\Grader1.jpg" />
+    <Content Include="BannerPics\Grader2.jpg" />
+    <Content Include="BannerPics\Grader3.jpg" />
+    <Content Include="BannerPics\Grader4.jpg" />
+    <Content Include="BannerPics\Grease-Gun-Ad.gif" />
+    <Content Include="BannerPics\Looking-to-sell-equipment.gif" />
+    <Content Include="BannerPics\Looking-to-sell-equipment-September-2011.gif" />
+    <Content Include="BannerPics\Place-a-Private-Ad-border.gif" />
+    <Content Include="BannerPics\Private-ad-250x120.gif" />
+    <Content Include="BannerPics\Production.jpg" />
+    <Content Include="BannerPics\Roller-320D.gif" />
+    <Content Include="BannerPics\Roller.jpg" />
+    <Content Include="BannerPics\valuework.jpg" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="AddUsedEquipment_Page1.aspx" />
+    <Content Include="AddUsedEquipment_Page2.aspx" />
+    <Content Include="AddUsedEquipment_Page3.aspx" />
+    <Content Include="ReportViewerCounterList.aspx" />
+    <Content Include="Enquire.aspx" />
+    <Content Include="EnquiryConfirmation.aspx" />
+    <Content Include="Images\installation_progress.gif" />
+    <Content Include="LeadManagement\Caterpillar\Caterpillar-Parts.aspx" />
+    <Content Include="LeadManagement\Caterpillar\Images\Caterpillar-Engines.jpg" />
+    <Content Include="LeadManagement\Caterpillar\Images\Caterpillar-Logo.jpg" />
+    <Content Include="LeadManagement\Caterpillar\Images\Caterpillar-Parts.jpg" />
+    <Content Include="LeadManagement\Cummins\Cummins-Ads.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="LeadManagement\Cummins\Cummins-Spares.aspx" />
+    <Content Include="LeadManagement\Cummins\Images\Cummins-Engine-Parts.jpg" />
+    <Content Include="LeadManagement\Cummins\Images\Cummins-Engine.jpg" />
+    <Content Include="LeadManagement\Cummins\Images\Cummins-Generator.jpg" />
+    <Content Include="LeadManagement\Cummins\Images\Cummins-Injection-Pump.jpg" />
+    <Content Include="LeadManagement\Earthmoving-Spares\Earthmoving-Spares.aspx" />
+    <Content Include="LeadManagement\Earthmoving-Spares\Images\Earthmoving-Spares.jpg" />
+    <Content Include="LeadManagement\Engine-Parts\Images\engine-part.jpg" />
+    <Content Include="LeadManagement\Engine-Parts\Images\engine-parts.jpg" />
+    <Content Include="LeadManagement\Engine-Parts\Engine-Parts-Ads.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="LeadManagement\Engine-Parts\Engine-Parts.aspx" />
+    <Content Include="LeadManagement\Google\GoogleKeywordSearch.aspx" />
+    <Content Include="Images\corner.gif" />
+    <Content Include="Images\GES_New.jpg" />
+    <Content Include="Images\NoPic.gif" />
+    <Content Include="Images\pdf.gif" />
+    <Content Include="Images\Shantui1.jpg" />
+    <Content Include="Images\Shantui2.jpg" />
+    <Content Include="Images\sold.jpg" />
+    <Content Include="Images\sold1.jpg" />
+    <Content Include="Images\submit.jpg" />
+    <Content Include="Images\uploading.gif" />
+    <Content Include="LeadManagement\JCB\Images\JCB-Parts.jpg" />
+    <Content Include="LeadManagement\JCB\JCB-Parts.aspx" />
+    <Content Include="LeadManagement\Lead-Enquiry-Confirmation.aspx" />
+    <Content Include="LeadManagement\Perkins\Perkins-Spares.aspx" />
+    <Content Include="LeadManagement\Perkins\Perkins-Ads.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="LeadManagement\Perkins\Images\perkins-cat-engine.jpg" />
+    <Content Include="LeadManagement\Perkins\Images\Perkins-Engine-Parts.jpg" />
+    <Content Include="LeadManagement\Undercarriage-Parts\Images\berco-tracks.jpg" />
+    <Content Include="LeadManagement\Undercarriage-Parts\Images\Undercarriage-Parts.jpg" />
+    <Content Include="LeadManagement\Undercarriage-Parts\Images\Undercarriage-Tracks.jpg" />
+    <Content Include="LeadManagement\Undercarriage-Parts\Undercarriage-Parts-Ads.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="LeadManagement\Undercarriage-Parts\Undercarriage-Parts.aspx" />
+    <Content Include="MyQuip.aspx" />
+    <Content Include="PromotionManagement\Images\action_button1.png" />
+    <Content Include="PromotionManagement\Images\action_button2.png" />
+    <Content Include="PromotionManagement\Images\arrow_down.png" />
+    <Content Include="PromotionManagement\Images\body.png" />
+    <Content Include="PromotionManagement\Images\body_bg.png" />
+    <Content Include="PromotionManagement\Images\checkbox.png" />
+    <Content Include="PromotionManagement\Images\checklist.png" />
+    <Content Include="PromotionManagement\Images\content_bottom_bg.png" />
+    <Content Include="PromotionManagement\Images\content_mid_bg.png" />
+    <Content Include="PromotionManagement\Images\content_top_bg.png" />
+    <Content Include="PromotionManagement\Images\control-next-hover.png" />
+    <Content Include="PromotionManagement\Images\control-next.png" />
+    <Content Include="PromotionManagement\Images\control-prev-hover.png" />
+    <Content Include="PromotionManagement\Images\control-prev.png" />
+    <Content Include="PromotionManagement\Images\divider.png" />
+    <Content Include="PromotionManagement\Images\featured-area-bg.png" />
+    <Content Include="PromotionManagement\Images\feat_form_input.png" />
+    <Content Include="PromotionManagement\Images\feat_form_input_focus.png" />
+    <Content Include="PromotionManagement\Images\form_divider.png" />
+    <Content Include="PromotionManagement\Images\logo.png" />
+    <Content Include="PromotionManagement\Images\map.png" />
+    <Content Include="PromotionManagement\Images\more_button.png" />
+    <Content Include="PromotionManagement\Images\newsletter_form.png" />
+    <Content Include="PromotionManagement\Images\newsletter_form_button.png" />
+    <Content Include="PromotionManagement\Images\newsletter_form_input.png" />
+    <Content Include="PromotionManagement\Images\newsletter_input.jpg" />
+    <Content Include="PromotionManagement\Images\phone-number.png" />
+    <Content Include="PromotionManagement\Images\quote.png" />
+    <Content Include="PromotionManagement\Images\scrollimages_bg.png" />
+    <Content Include="PromotionManagement\Images\signup.png" />
+    <Content Include="PromotionManagement\Images\slider_buttons.png" />
+    <Content Include="PromotionManagement\Images\small-right.png" />
+    <Content Include="PromotionManagement\Images\subscribe_input.jpg" />
+    <Content Include="PromotionManagement\Images\tipsy.gif" />
+    <Content Include="PromotionManagement\Images\tour_button.png" />
+    <Content Include="PromotionManagement\Images\tumb-bg.png" />
+    <Content Include="PromotionManagement\Images\tweet_quote.png" />
+    <Content Include="PromotionManagement\Images\ver_divider.png" />
+    <Content Include="PromotionManagement\Shantui\promo.css" />
+    <Content Include="PromotionManagement\Shantui\shantui-forklift-promotion.aspx" />
+    <Content Include="ReportViewer.aspx" />
+    <Content Include="Scripts\lightbox\builder.js" />
+    <Content Include="Scripts\lightbox\bullet.gif" />
+    <Content Include="Scripts\lightbox\close.gif" />
+    <Content Include="Scripts\lightbox\closelabel.gif" />
+    <Content Include="Scripts\lightbox\donate-button.gif" />
+    <Content Include="Scripts\lightbox\download-icon.gif" />
+    <Content Include="Scripts\lightbox\effects.js" />
+    <Content Include="Scripts\lightbox\image-1.jpg" />
+    <Content Include="Scripts\lightbox\index.html" />
+    <Content Include="Scripts\lightbox\lightbox.js" />
+    <Content Include="Scripts\lightbox\loading.gif" />
+    <Content Include="Scripts\lightbox\nextlabel.gif" />
+    <Content Include="Scripts\lightbox\prevlabel.gif" />
+    <Content Include="Scripts\lightbox\prototype.js" />
+    <Content Include="Scripts\lightbox\scriptaculous.js" />
+    <Content Include="Scripts\lightbox\thumb-1.jpg" />
+    <Content Include="Shantui.aspx" />
+    <Content Include="ShantuiDetail.aspx" />
+    <Content Include="ShantuiList.aspx" />
+    <Content Include="ShantuiPics\Bulldozers\SD13.jpg" />
+    <Content Include="ShantuiPics\Bulldozers\SD16.jpg" />
+    <Content Include="ShantuiPics\Bulldozers\SD23.jpg" />
+    <Content Include="ShantuiPics\Bulldozers\SD32.jpg" />
+    <Content Include="ShantuiPics\Bulldozers\SD42.jpg" />
+    <Content Include="ShantuiPics\Excavator\SE210.jpg" />
+    <Content Include="ShantuiPics\forklift\forklift-shantui-sf30.jpg" />
+    <Content Include="ShantuiPics\forklift\SF30.jpg" />
+    <Content Include="ShantuiPics\MotorGrader\SG18-3.jpg" />
+    <Content Include="ShantuiPics\MotorGrader\SG21-3.jpg" />
+    <Content Include="ShantuiPics\Pipelayer\SP45Y.jpg" />
+    <Content Include="ShantuiPics\Pipelayer\SP70Y.jpg" />
+    <Content Include="ShantuiPics\Rollers\SR12-5.jpg" />
+    <Content Include="ShantuiPics\Rollers\SR19P.jpg" />
+    <Content Include="ShantuiPics\Rollers\SR26T.jpg" />
+    <Content Include="ShantuiPics\WheelLoader\SL30W.jpg" />
+    <Content Include="ShantuiPics\WheelLoader\SL50W.jpg" />
+    <Content Include="ShantuiPics\WheelLoader\SL60W.jpg" />
+    <Content Include="sitemap.aspx" />
+    <Content Include="Styles\lightbox.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="UsedEquipment.aspx" />
+    <Content Include="UsedEquipmentDetail.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\PasswordRecovery.aspx.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\PasswordRecovery.aspx.designer.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddUsedEquipment.aspx.cs">
+      <DependentUpon>AddUsedEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUsedEquipment.aspx.designer.cs">
+      <DependentUpon>AddUsedEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\BaseGallery.cs" />
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddUsedEquipment_Page1.aspx.cs">
+      <DependentUpon>AddUsedEquipment_Page1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUsedEquipment_Page1.aspx.designer.cs">
+      <DependentUpon>AddUsedEquipment_Page1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddUsedEquipment_Page2.aspx.cs">
+      <DependentUpon>AddUsedEquipment_Page2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUsedEquipment_Page2.aspx.designer.cs">
+      <DependentUpon>AddUsedEquipment_Page2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddUsedEquipment_Page3.aspx.cs">
+      <DependentUpon>AddUsedEquipment_Page3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUsedEquipment_Page3.aspx.designer.cs">
+      <DependentUpon>AddUsedEquipment_Page3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GESDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GESDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerCounterList.aspx.cs">
+      <DependentUpon>ReportViewerCounterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportViewerCounterList.aspx.designer.cs">
+      <DependentUpon>ReportViewerCounterList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CounterList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CounterList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GES.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enquire.aspx.cs">
+      <DependentUpon>Enquire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enquire.aspx.designer.cs">
+      <DependentUpon>Enquire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GESUsedMachineList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GESUsedMachineList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnquiryConfirmation.aspx.cs">
+      <DependentUpon>EnquiryConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnquiryConfirmation.aspx.designer.cs">
+      <DependentUpon>EnquiryConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LeadManagement\Caterpillar\Caterpillar-Parts.aspx.cs">
+      <DependentUpon>Caterpillar-Parts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadManagement\Caterpillar\Caterpillar-Parts.aspx.designer.cs">
+      <DependentUpon>Caterpillar-Parts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadManagement\Cummins\Cummins-Spares.aspx.cs">
+      <DependentUpon>Cummins-Spares.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadManagement\Cummins\Cummins-Spares.aspx.designer.cs">
+      <DependentUpon>Cummins-Spares.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadManagement\Earthmoving-Spares\Earthmoving-Spares.aspx.cs">
+      <DependentUpon>Earthmoving-Spares.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadManagement\Earthmoving-Spares\Earthmoving-Spares.aspx.designer.cs">
+      <DependentUpon>Earthmoving-Spares.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadManagement\Engine-Parts\Engine-Parts.aspx.cs">
+      <DependentUpon>Engine-Parts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadManagement\Engine-Parts\Engine-Parts.aspx.designer.cs">
+      <DependentUpon>Engine-Parts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadManagement\Google\GoogleKeywordSearch.aspx.cs">
+      <DependentUpon>GoogleKeywordSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadManagement\Google\GoogleKeywordSearch.aspx.designer.cs">
+      <DependentUpon>GoogleKeywordSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadManagement\Google\GetNicheKeywords.cs" />
+    <Compile Include="LeadManagement\Google\GetRelatedKeywords.cs" />
+    <Compile Include="LeadManagement\Google\SampleBase.cs" />
+    <Compile Include="LeadManagement\JCB\JCB-Parts.aspx.cs">
+      <DependentUpon>JCB-Parts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadManagement\JCB\JCB-Parts.aspx.designer.cs">
+      <DependentUpon>JCB-Parts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadManagement\Lead-Enquiry-Confirmation.aspx.cs">
+      <DependentUpon>Lead-Enquiry-Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadManagement\Lead-Enquiry-Confirmation.aspx.designer.cs">
+      <DependentUpon>Lead-Enquiry-Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadManagement\Perkins\Perkins-Spares.aspx.cs">
+      <DependentUpon>Perkins-Spares.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadManagement\Perkins\Perkins-Spares.aspx.designer.cs">
+      <DependentUpon>Perkins-Spares.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadManagement\Undercarriage-Parts\Undercarriage-Parts.aspx.cs">
+      <DependentUpon>Undercarriage-Parts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadManagement\Undercarriage-Parts\Undercarriage-Parts.aspx.designer.cs">
+      <DependentUpon>Undercarriage-Parts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyQuip.aspx.cs">
+      <DependentUpon>MyQuip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyQuip.aspx.designer.cs">
+      <DependentUpon>MyQuip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PromotionManagement\Shantui\shantui-forklift-promotion.aspx.cs">
+      <DependentUpon>shantui-forklift-promotion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PromotionManagement\Shantui\shantui-forklift-promotion.aspx.designer.cs">
+      <DependentUpon>shantui-forklift-promotion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportViewer.aspx.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.aspx.designer.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shantui.aspx.cs">
+      <DependentUpon>Shantui.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shantui.aspx.designer.cs">
+      <DependentUpon>Shantui.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShantuiDetail.aspx.cs">
+      <DependentUpon>ShantuiDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShantuiDetail.aspx.designer.cs">
+      <DependentUpon>ShantuiDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShantuiList.aspx.cs">
+      <DependentUpon>ShantuiList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShantuiList.aspx.designer.cs">
+      <DependentUpon>ShantuiList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sitemap.aspx.cs">
+      <DependentUpon>sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sitemap.aspx.designer.cs">
+      <DependentUpon>sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\SourceGallery.cs" />
+    <Compile Include="UsedEquipment.aspx.cs">
+      <DependentUpon>UsedEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsedEquipment.aspx.designer.cs">
+      <DependentUpon>UsedEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsedEquipmentDetail.aspx.cs">
+      <DependentUpon>UsedEquipmentDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsedEquipmentDetail.aspx.designer.cs">
+      <DependentUpon>UsedEquipmentDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ShantuiPics\Spare parts\" />
+    <Folder Include="Specs\" />
+    <Folder Include="UsedPics\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Ads.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DAL\GES.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GES.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\CounterList.xsc">
+      <DependentUpon>CounterList.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\CounterList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CounterList.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\CounterList.xss">
+      <DependentUpon>CounterList.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\GESUsedMachineList.xsc">
+      <DependentUpon>GESUsedMachineList.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\GESUsedMachineList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GESUsedMachineList.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\GESUsedMachineList.xss">
+      <DependentUpon>GESUsedMachineList.xsd</DependentUpon>
+    </None>
+    <None Include="GESDataSet.xsc">
+      <DependentUpon>GESDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GESDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GESDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GESDataSet.xss">
+      <DependentUpon>GESDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShantuiPics\Bulldozers\SD13.PDF" />
+    <None Include="ShantuiPics\Bulldozers\SD16.pdf" />
+    <None Include="ShantuiPics\Bulldozers\SD23.pdf" />
+    <None Include="ShantuiPics\Bulldozers\SD32.pdf" />
+    <None Include="ShantuiPics\Bulldozers\SD42.pdf" />
+    <None Include="ShantuiPics\Excavator\SE130.pdf" />
+    <None Include="ShantuiPics\Excavator\SE210.pdf" />
+    <None Include="ShantuiPics\Excavator\SE330.pdf" />
+    <None Include="ShantuiPics\forklift\SF30.pdf" />
+    <None Include="ShantuiPics\MotorGrader\MotorGrader.pdf" />
+    <None Include="ShantuiPics\Pipelayer\Pipelayer.pdf" />
+    <None Include="ShantuiPics\Rollers\SR12-5.pdf" />
+    <None Include="ShantuiPics\Rollers\SR19P.pdf" />
+    <None Include="ShantuiPics\Rollers\SR26T.pdf" />
+    <None Include="ShantuiPics\WheelLoader\WheelLoader.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\CounterList.rdlc" />
+    <EmbeddedResource Include="Reports\UsedEquipmentList.rdlc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12782</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

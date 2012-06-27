@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>images/engine-part.jpg</ImageUrl>
+    <AlternateText>engine-part</AlternateText>
+    <Keyword>engine-part</Keyword>
+    <Caption>engine-part</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>images/engine-parts.jpg</ImageUrl>
+    <AlternateText>engine-parts</AlternateText>
+    <Keyword>engine-parts</Keyword>
+    <Caption>engine-parts</Caption>
+  </Ad>
+</Advertisements>

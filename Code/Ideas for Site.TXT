@@ -1,0 +1,79 @@
+Terms and conditions
+--------------------
+http://www.zadoon.com/en/terms-conditions/
+http://www.durasales.co.za/Home/tabid/38/ctl/Terms/language/en-ZA/Default.aspx
+
+
+Download code
+-------------
+http://www.etechplanet.com/blog/downloading-file-using-aspnet-and-c.aspx
+http://aspalliance.com/259_downloading_files__forcing_the_file_download_dialog
+
+
+
+Nice Grid Demo
+-------------- 
+http://www.miguelmoreno.net/post/Free-single-developer-license-for-DevExpress-controls.aspx
+http://www.devexpress.com/products/net/controls/silverlight/grid/
+http://demos.devexpress.com/AgDataGridFreeDemos/
+
+C:\Program Files\Developer Express\Free Controls for Silverlight\Demo\AgDataGrid\ClientBin\DataGridDemoStartPage.html
+C:\Program Files\Developer Express\Free Controls for Silverlight\Demo\AgMenu\ClientBin\MenuDemoStartPage.html
+
+
+Google adwords api
+------------------
+http://code.google.com/apis/adwords/docs/reference/latest/AdGroupAdService.html
+
+File upload app
+  - http://www.asp.net/data-access/tutorials/uploading-files-cs
+  - http://www.codeproject.com/KB/aspnet/fileupload.aspx
+  - http://www.c-sharpcorner.com/UploadFile/prathore/MultipleImagesUpload05122009042335AM/MultipleImagesUpload.aspx
+
+Creating a thumbnail 
+  - http://www.dotnetcurry.com/ShowArticle.aspx?ID=140&AspxAutoDetectCookieSupport=1
+
+Resizing the image
+  - http://www.codeproject.com/KB/GDI-plus/imageresize.aspx
+  - 	
+  - http://stackoverflow.com/questions/249587/high-quality-image-scaling-c/353222#353222
+  - http://forums.asp.net/p/29645/29645.aspx
+
+
+Inserting leads into Zoho
+-------------------------
+http://zohocrmapi.wiki.zoho.com/insertRecords-Method.html#Test_Program
+
+
+Online chat
+Notify me if an item becomes available
+Place vehicles on the showroom for 11.25 per day
+Place a wanted ad - machinezone
+Search alerts - machinezone
+newsletters - machinezone
+Sales events / auctions - machinezone
+make an offer
+Dealer listing - pay for advertising
+offer a service to find machines for buyer - get comm
+private seller - pay for advertising
+site banner advertising
+Add "new" image to newly created ads
+
+
+Search
+Year range - sliders
+price range - sliders
+
+
+Additonal fields
+----------------
+Machine table
+ store whether this is a buy or sell
+ Add a machine (value for money) rating out of 10
+ YouTube video link
+ Location of machine
+
+
+Image Table - indicate what is the main pic
+
+New Table - Diagnosis report

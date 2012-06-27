@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/Default.aspx" title="Aurigma Image Uploader 7 Demo Applications"  description="">
+		<siteMapNode url="" title="Quick start">
+			<siteMapNode url="~/BasicDemo/Default.aspx" title="Basic demo" demo="basicdemo">
+				<siteMapNode url="~/BasicDemo/Gallery.aspx" title="Uploaded files" demo="basicdemo"></siteMapNode>
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="" title="Images">
+			<siteMapNode url="~/ImageUploadDemo/ResizedPhotoUploadDemo/Default.aspx" title="Resized photo upload demo" demo="resizeimages">
+				<siteMapNode url="~/ImageUploadDemo/ResizedPhotoUploadDemo/Gallery.aspx" title="Uploaded files" demo="resizeimages"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/ImageUploadDemo/CroppedPhotoUploadDemo/Default.aspx" title="Cropped photo upload demo" demo="cropimages">
+				<siteMapNode url="~/ImageUploadDemo/CroppedPhotoUploadDemo/Gallery.aspx" title="Uploaded files" demo="cropimages"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/ImageUploadDemo/WatermarkDemo/Default.aspx" title="Watermark demo" demo="addingwatermark">
+				<siteMapNode url="~/ImageUploadDemo/WatermarkDemo/Gallery.aspx" title="Uploaded files" demo="addingwatermark"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/ImageUploadDemo/ExifDemo/Default.aspx" title="EXIF demo" demo="extractexif">
+				<siteMapNode url="~/ImageUploadDemo/ExifDemo/Gallery.aspx" title="Uploaded files" demo="extractexif"></siteMapNode>
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="" title="Files">
+			<siteMapNode url="~/FileUploadDemo/FoldersUploadDemo/Default.aspx" title="Folders upload demo" demo="uploadfolders">
+				<siteMapNode url="~/FileUploadDemo/FoldersUploadDemo/Gallery.aspx" title="Uploaded files" demo="uploadfolders"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/FileUploadDemo/AuxiliaryDataUploadDemo/Default.aspx" title="Auxiliary data upload demo" demo="auxiliarydata">
+				<siteMapNode url="~/FileUploadDemo/AuxiliaryDataUploadDemo/Gallery.aspx" title="Uploaded files" demo="auxiliarydata"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/FileUploadDemo/FailSafeUploadDemo/Default.aspx" title="Fail-safe upload demo" demo="reliableupload">
+				<siteMapNode url="~/FileUploadDemo/FailSafeUploadDemo/Gallery.aspx" title="Uploaded files" demo="reliableupload"></siteMapNode>
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="" title="Customization">
+			<siteMapNode url="~/CustomizationDemo/LocalizationDemo/Default.aspx" title="Localization demo" demo="localization">
+				<siteMapNode url="~/CustomizationDemo/LocalizationDemo/Gallery.aspx" title="Uploaded files" demo="localization"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/CustomizationDemo/FileRestrictionsDemo/Default.aspx" title="File restrictions demo" demo="restrictions">
+				<siteMapNode url="~/CustomizationDemo/FileRestrictionsDemo/Gallery.aspx" title="Uploaded files" demo="restrictions"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/CustomizationDemo/CustomUIDemo/Default.aspx" title="Custom user interface demo" demo="customuidemo">
+				<siteMapNode url="~/CustomizationDemo/CustomUIDemo/Gallery.aspx" title="Uploaded files" demo="customuidemo"></siteMapNode>
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="" title="Photo business">
+			<siteMapNode url="~/PhotoBusinessDemo/PhotoOptimizationDemo/Default.aspx" title="Photo optimization demo" demo="photooptimization">
+				<siteMapNode url="~/PhotoBusinessDemo/PhotoOptimizationDemo/Gallery.aspx" title="Uploaded files" demo="photooptimization"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/PhotoBusinessDemo/PhotoOrderDemo/Default.aspx" title="Photo order demo" demo="photoorder">
+				<siteMapNode url="~/PhotoBusinessDemo/PhotoOrderDemo/Gallery.aspx" title="Uploaded files" demo="photoorder"></siteMapNode>
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="" title="Cloud storage">
+			<siteMapNode url="~/CloudStorageDemo/AmazonS3Demo/Default.aspx" title="Amazon S3 demo" demo="amazons3">
+				<siteMapNode url="~/CloudStorageDemo/AmazonS3Demo/Gallery.aspx" title="Uploaded files" demo="amazons3"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/CloudStorageDemo/NirvanixDemo/Default.aspx" title="Nirvanix demo" demo="nirvanix">
+				<siteMapNode url="~/CloudStorageDemo/NirvanixDemo/Gallery.aspx" title="Uploaded files" demo="nirvanix"></siteMapNode>
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="" title="More...">
+			<siteMapNode url="~/MultipleDescriptionsDemo/Default.aspx" title="Multiple descriptions demo" demo="multipledescriptions">
+				<siteMapNode url="~/MultipleDescriptionsDemo/Gallery.aspx" title="Uploaded files" demo="multipledescriptions"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="~/WizardDemo/Default.aspx" title="Multi-step wizard demo" demo="multistepwizard">
+				<siteMapNode url="~/WizardDemo/Gallery.aspx" title="Uploaded files" demo="multistepwizard"></siteMapNode>
+			</siteMapNode>
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>

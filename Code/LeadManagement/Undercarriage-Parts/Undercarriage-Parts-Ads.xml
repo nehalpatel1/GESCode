@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>images/berco-tracks.jpg</ImageUrl>
+    <AlternateText>berco-tracks</AlternateText>
+    <Keyword>berco-tracks</Keyword>
+    <Caption>berco-tracks</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>images/Undercarriage-Parts.jpg</ImageUrl>
+    <AlternateText>Undercarriage-Parts</AlternateText>
+    <Keyword>Undercarriage-Parts</Keyword>
+    <Caption>Undercarriage-Parts</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>images/Undercarriage-Tracks.jpg</ImageUrl>
+    <AlternateText>Undercarriage-Tracks</AlternateText>
+    <Keyword>Undercarriage-Tracks</Keyword>
+    <Caption>Undercarriage-Tracks</Caption>
+  </Ad>
+</Advertisements>

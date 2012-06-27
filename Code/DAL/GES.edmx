@@ -1,0 +1,1106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GESModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="GESModelStoreContainer">
+          <EntitySet Name="Counters" EntityType="GESModel.Store.Counters" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Enquiries" EntityType="GESModel.Store.Enquiries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Industry" EntityType="GESModel.Store.Industry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Machine" EntityType="GESModel.Store.Machine" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MachineType" EntityType="GESModel.Store.MachineType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MachineTypeIndustry" EntityType="GESModel.Store.MachineTypeIndustry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Manufacturer" EntityType="GESModel.Store.Manufacturer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Model" EntityType="GESModel.Store.Model" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Photo" EntityType="GESModel.Store.Photo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="GESModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Shantui" EntityType="GESModel.Store.Shantui" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Specification" EntityType="GESModel.Store.Specification" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="GESModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vMachineTypeCount" EntityType="GESModel.Store.vMachineTypeCount" store:Type="Views" store:Schema="dbo" store:Name="vMachineTypeCount">
+            <DefiningQuery>SELECT 
+      [vMachineTypeCount].[MachineTypeName] AS [MachineTypeName], 
+      [vMachineTypeCount].[MachineTypeID] AS [MachineTypeID], 
+      [vMachineTypeCount].[Status] AS [Status]
+      FROM [dbo].[vMachineTypeCount] AS [vMachineTypeCount]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vManufacturerCount" EntityType="GESModel.Store.vManufacturerCount" store:Type="Views" store:Schema="dbo" store:Name="vManufacturerCount">
+            <DefiningQuery>SELECT 
+      [vManufacturerCount].[ManufacturerName] AS [ManufacturerName], 
+      [vManufacturerCount].[ManufacturerID] AS [ManufacturerID], 
+      [vManufacturerCount].[Status] AS [Status], 
+      [vManufacturerCount].[MachineTypeID] AS [MachineTypeID]
+      FROM [dbo].[vManufacturerCount] AS [vManufacturerCount]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vModelCount" EntityType="GESModel.Store.vModelCount" store:Type="Views" store:Schema="dbo" store:Name="vModelCount">
+            <DefiningQuery>SELECT 
+      [vModelCount].[ModelName] AS [ModelName], 
+      [vModelCount].[ModelID] AS [ModelID], 
+      [vModelCount].[MachineTypeID] AS [MachineTypeID], 
+      [vModelCount].[ManufacturerID] AS [ManufacturerID], 
+      [vModelCount].[Status] AS [Status]
+      FROM [dbo].[vModelCount] AS [vModelCount]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vShantuiProductList" EntityType="GESModel.Store.vShantuiProductList" store:Type="Views" store:Schema="dbo" store:Name="vShantuiProductList">
+            <DefiningQuery>SELECT 
+      [vShantuiProductList].[MachineID] AS [MachineID], 
+      [vShantuiProductList].[MachineGrade] AS [MachineGrade], 
+      [vShantuiProductList].[SerialNo] AS [SerialNo], 
+      [vShantuiProductList].[Year] AS [Year], 
+      [vShantuiProductList].[Mileage] AS [Mileage], 
+      [vShantuiProductList].[Location] AS [Location], 
+      [vShantuiProductList].[SellPrice] AS [SellPrice], 
+      [vShantuiProductList].[Status] AS [Status], 
+      [vShantuiProductList].[MachineTypeName] AS [MachineTypeName], 
+      [vShantuiProductList].[IndustryName] AS [IndustryName], 
+      [vShantuiProductList].[ModelName] AS [ModelName], 
+      [vShantuiProductList].[ManufacturerName] AS [ManufacturerName], 
+      [vShantuiProductList].[MachineDescription] AS [MachineDescription], 
+      [vShantuiProductList].[MachineTypeID] AS [MachineTypeID], 
+      [vShantuiProductList].[ModelID] AS [ModelID], 
+      [vShantuiProductList].[ManufacturerID] AS [ManufacturerID], 
+      [vShantuiProductList].[PhotoUrl] AS [PhotoUrl]
+      FROM [dbo].[vShantuiProductList] AS [vShantuiProductList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vUsedMachineList" EntityType="GESModel.Store.vUsedMachineList" store:Type="Views" store:Schema="dbo" store:Name="vUsedMachineList">
+            <DefiningQuery>SELECT 
+      [vUsedMachineList].[MachineID] AS [MachineID], 
+      [vUsedMachineList].[MachineGrade] AS [MachineGrade], 
+      [vUsedMachineList].[SerialNo] AS [SerialNo], 
+      [vUsedMachineList].[Year] AS [Year], 
+      [vUsedMachineList].[Mileage] AS [Mileage], 
+      [vUsedMachineList].[Location] AS [Location], 
+      [vUsedMachineList].[SellPrice] AS [SellPrice], 
+      [vUsedMachineList].[Status] AS [Status], 
+      [vUsedMachineList].[MachineTypeName] AS [MachineTypeName], 
+      [vUsedMachineList].[IndustryName] AS [IndustryName], 
+      [vUsedMachineList].[ModelName] AS [ModelName], 
+      [vUsedMachineList].[ManufacturerName] AS [ManufacturerName], 
+      [vUsedMachineList].[PhotoUrl] AS [PhotoUrl], 
+      [vUsedMachineList].[MachineDescription] AS [MachineDescription], 
+      [vUsedMachineList].[MachineTypeID] AS [MachineTypeID], 
+      [vUsedMachineList].[ModelID] AS [ModelID], 
+      [vUsedMachineList].[ManufacturerID] AS [ManufacturerID], 
+      [vUsedMachineList].[IndustryID] AS [IndustryID], 
+      [vUsedMachineList].[DateInserted] AS [DateInserted], 
+      [vUsedMachineList].[PhotoName] AS [PhotoName]
+      FROM [dbo].[vUsedMachineList] AS [vUsedMachineList]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Machine_Industry" Association="GESModel.Store.FK_Machine_Industry">
+            <End Role="Industry" EntitySet="Industry" />
+            <End Role="Machine" EntitySet="Machine" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Machine_MachineType1" Association="GESModel.Store.FK_Machine_MachineType1">
+            <End Role="MachineType" EntitySet="MachineType" />
+            <End Role="Machine" EntitySet="Machine" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Machine_Manufacturer1" Association="GESModel.Store.FK_Machine_Manufacturer1">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="Machine" EntitySet="Machine" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MachineID" Association="GESModel.Store.FK_MachineID">
+            <End Role="Machine" EntitySet="Machine" />
+            <End Role="Photo" EntitySet="Photo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Roles" Association="GESModel.Store.FK_Users_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Counters">
+          <Key>
+            <PropertyRef Name="RowNo" />
+          </Key>
+          <Property Name="RowNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CounterType" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="NumberOfHits" Type="bigint" Nullable="false" />
+          <Property Name="ExecutionPath" Type="varchar" MaxLength="1000" />
+          <Property Name="DateInserted" Type="date" />
+        </EntityType>
+        <EntityType Name="Enquiries">
+          <Key>
+            <PropertyRef Name="EnquiryID" />
+          </Key>
+          <Property Name="EnquiryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="DateInserted" Type="datetime" Nullable="false" />
+          <Property Name="Comments" Type="varchar(max)" />
+          <Property Name="MachineID" Type="int" Nullable="false" />
+          <Property Name="Source" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Industry">
+          <Key>
+            <PropertyRef Name="IndustryID" />
+          </Key>
+          <Property Name="IndustryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IndustryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IndustryDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Machine">
+          <Key>
+            <PropertyRef Name="MachineID" />
+          </Key>
+          <Property Name="MachineID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="MachineTypeID" Type="int" Nullable="false" />
+          <Property Name="ModelID" Type="int" />
+          <Property Name="IndustryID" Type="int" />
+          <Property Name="MachineDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="MachineGrade" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SerialNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Year" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mileage" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactUserID" Type="int" />
+          <Property Name="CostPrice" Type="money" />
+          <Property Name="SellPrice" Type="money" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DateInserted" Type="datetime" />
+          <Property Name="ContactPerson" Type="nchar" MaxLength="100" />
+          <Property Name="EmailAddress" Type="nchar" MaxLength="100" />
+          <Property Name="ContactNumber" Type="nchar" MaxLength="10" />
+          <Property Name="DealerMachine" Type="char" MaxLength="1" />
+          <Property Name="ModelName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MachineType">
+          <Key>
+            <PropertyRef Name="MachineTypeID" />
+          </Key>
+          <Property Name="MachineTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MachineTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MachineTypeDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="MachineTypeIndustry">
+          <Key>
+            <PropertyRef Name="MachineTypeIndustryID" />
+          </Key>
+          <Property Name="MachineTypeIndustryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MachineTypeID" Type="int" Nullable="false" />
+          <Property Name="IndustryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Manufacturer">
+          <Key>
+            <PropertyRef Name="ManufacturerID" />
+          </Key>
+          <Property Name="ManufacturerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ManufacturerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ManufacturerDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="ModelID" />
+          </Key>
+          <Property Name="ModelID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MachineTypeID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" Nullable="false" />
+          <Property Name="ModelName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ModelDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Photo">
+          <Key>
+            <PropertyRef Name="PhotoID" />
+          </Key>
+          <Property Name="PhotoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MachineID" Type="int" Nullable="false" />
+          <Property Name="PhotoName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PhotoDescription" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PhotoUrl" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ShowThumbnail" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="MachinePhotoID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Shantui">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Model" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OperatingWeight" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Engine" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Power" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Capacity" Type="varchar" MaxLength="20" />
+          <Property Name="TrackWidth" Type="varchar" MaxLength="20" />
+          <Property Name="BladeWidth" Type="varchar" MaxLength="20" />
+          <Property Name="DrumWidth" Type="varchar" MaxLength="20" />
+          <Property Name="PictureURL" Type="varchar" MaxLength="100" />
+          <Property Name="MainPicture" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MainPictureOrder" Type="int" Nullable="false" />
+          <Property Name="SpecsheetURL" Type="varchar" MaxLength="100" />
+          <Property Name="Price" Type="numeric" />
+        </EntityType>
+        <EntityType Name="Specification">
+          <Key>
+            <PropertyRef Name="SpecID" />
+          </Key>
+          <Property Name="SpecID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MachineID" Type="int" Nullable="false" />
+          <Property Name="SpecName" Type="varchar" MaxLength="50" />
+          <Property Name="SpecDescription" Type="varchar" MaxLength="50" />
+          <Property Name="SpecUrl" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="Status" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="MachineSpecID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+          <Property Name="TelephoneNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="CellNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="FaxNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="AddrStreet1" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddrStreet2" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddrSuburb" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddrCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddrProvince" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddrCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="AddrCountry" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="Email" Type="nchar" MaxLength="100" />
+          <Property Name="LatestLoggedInDate" Type="datetime" />
+          <Property Name="NumberOfLogins" Type="int" />
+          <Property Name="Comments" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\CODE\SAMPLE\HELLOGES\APP_DATA\GES.MDF.dbo.vMachineTypeCount' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vMachineTypeCount">
+          <Key>
+            <PropertyRef Name="MachineTypeID" />
+            <PropertyRef Name="Status" />
+          </Key>
+          <Property Name="MachineTypeName" Type="nvarchar" MaxLength="63" />
+          <Property Name="MachineTypeID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\CODE\SAMPLE\HELLOGES\APP_DATA\GES.MDF.dbo.vManufacturerCount' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vManufacturerCount">
+          <Key>
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="MachineTypeID" />
+          </Key>
+          <Property Name="ManufacturerName" Type="nvarchar" MaxLength="63" />
+          <Property Name="ManufacturerID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="MachineTypeID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\CODE\SAMPLE\HELLOGES\APP_DATA\GES.MDF.dbo.vModelCount' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vModelCount">
+          <Key>
+            <PropertyRef Name="ModelID" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="Status" />
+          </Key>
+          <Property Name="ModelName" Type="nvarchar" MaxLength="63" />
+          <Property Name="ModelID" Type="int" Nullable="false" />
+          <Property Name="MachineTypeID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\CODE\SAMPLE\HELLOGES\APP_DATA\GES.MDF.dbo.vShantuiProductList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vShantuiProductList">
+          <Key>
+            <PropertyRef Name="MachineID" />
+            <PropertyRef Name="MachineGrade" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="MachineTypeName" />
+            <PropertyRef Name="IndustryName" />
+            <PropertyRef Name="ModelName" />
+            <PropertyRef Name="ManufacturerName" />
+            <PropertyRef Name="MachineTypeID" />
+          </Key>
+          <Property Name="MachineID" Type="int" Nullable="false" />
+          <Property Name="MachineGrade" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SerialNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Year" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mileage" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" />
+          <Property Name="SellPrice" Type="money" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="MachineTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IndustryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ModelName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ManufacturerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MachineDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="MachineTypeID" Type="int" Nullable="false" />
+          <Property Name="ModelID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="PhotoUrl" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\CODE\SAMPLE\HELLOGES\APP_DATA\GES.MDF.dbo.vUsedMachineList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vUsedMachineList">
+          <Key>
+            <PropertyRef Name="MachineID" />
+            <PropertyRef Name="MachineGrade" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="MachineTypeName" />
+            <PropertyRef Name="IndustryName" />
+            <PropertyRef Name="ManufacturerName" />
+            <PropertyRef Name="PhotoUrl" />
+            <PropertyRef Name="MachineTypeID" />
+          </Key>
+          <Property Name="MachineID" Type="int" Nullable="false" />
+          <Property Name="MachineGrade" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SerialNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Year" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mileage" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" />
+          <Property Name="SellPrice" Type="money" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="MachineTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IndustryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ModelName" Type="varchar" MaxLength="50" />
+          <Property Name="ManufacturerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PhotoUrl" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="MachineDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="MachineTypeID" Type="int" Nullable="false" />
+          <Property Name="ModelID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="IndustryID" Type="int" />
+          <Property Name="DateInserted" Type="datetime" />
+          <Property Name="PhotoName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Machine_Industry">
+          <End Role="Industry" Type="GESModel.Store.Industry" Multiplicity="0..1" />
+          <End Role="Machine" Type="GESModel.Store.Machine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Industry">
+              <PropertyRef Name="IndustryID" />
+            </Principal>
+            <Dependent Role="Machine">
+              <PropertyRef Name="IndustryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Machine_MachineType1">
+          <End Role="MachineType" Type="GESModel.Store.MachineType" Multiplicity="1" />
+          <End Role="Machine" Type="GESModel.Store.Machine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MachineType">
+              <PropertyRef Name="MachineTypeID" />
+            </Principal>
+            <Dependent Role="Machine">
+              <PropertyRef Name="MachineTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Machine_Manufacturer1">
+          <End Role="Manufacturer" Type="GESModel.Store.Manufacturer" Multiplicity="0..1" />
+          <End Role="Machine" Type="GESModel.Store.Machine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ManufacturerID" />
+            </Principal>
+            <Dependent Role="Machine">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MachineID">
+          <End Role="Machine" Type="GESModel.Store.Machine" Multiplicity="1" />
+          <End Role="Photo" Type="GESModel.Store.Photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Machine">
+              <PropertyRef Name="MachineID" />
+            </Principal>
+            <Dependent Role="Photo">
+              <PropertyRef Name="MachineID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Roles">
+          <End Role="Roles" Type="GESModel.Store.Roles" Multiplicity="1" />
+          <End Role="Users" Type="GESModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GESModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GESEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Industries" EntityType="GESModel.Industry" />
+          <EntitySet Name="Machines" EntityType="GESModel.Machine" />
+          <EntitySet Name="MachineTypes" EntityType="GESModel.MachineType" />
+          <EntitySet Name="MachineTypeIndustries" EntityType="GESModel.MachineTypeIndustry" />
+          <EntitySet Name="Manufacturers" EntityType="GESModel.Manufacturer" />
+          <EntitySet Name="Models" EntityType="GESModel.Model" />
+          <EntitySet Name="Photos" EntityType="GESModel.Photo" />
+          <EntitySet Name="Roles" EntityType="GESModel.Role" />
+          <EntitySet Name="Shantuis" EntityType="GESModel.Shantui" />
+          <EntitySet Name="Specifications" EntityType="GESModel.Specification" />
+          <EntitySet Name="vMachineTypeCounts" EntityType="GESModel.vMachineTypeCount" />
+          <EntitySet Name="vManufacturerCounts" EntityType="GESModel.vManufacturerCount" />
+          <EntitySet Name="vModelCounts" EntityType="GESModel.vModelCount" />
+          <EntitySet Name="vShantuiProductLists" EntityType="GESModel.vShantuiProductList" />
+          <EntitySet Name="vUsedMachineLists" EntityType="GESModel.vUsedMachineList" />
+          <AssociationSet Name="FK_Machine_Industry" Association="GESModel.FK_Machine_Industry">
+            <End Role="Industry" EntitySet="Industries" />
+            <End Role="Machine" EntitySet="Machines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Machine_MachineType1" Association="GESModel.FK_Machine_MachineType1">
+            <End Role="MachineType" EntitySet="MachineTypes" />
+            <End Role="Machine" EntitySet="Machines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Machine_Manufacturer1" Association="GESModel.FK_Machine_Manufacturer1">
+            <End Role="Manufacturer" EntitySet="Manufacturers" />
+            <End Role="Machine" EntitySet="Machines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MachineID" Association="GESModel.FK_MachineID">
+            <End Role="Machine" EntitySet="Machines" />
+            <End Role="Photo" EntitySet="Photos" />
+          </AssociationSet>
+          <EntitySet Name="Counters" EntityType="GESModel.Counter" />
+          <EntitySet Name="Enquiries" EntityType="GESModel.Enquiry" />
+          <EntitySet Name="Users" EntityType="GESModel.User" />
+          <AssociationSet Name="FK_Users_Roles" Association="GESModel.FK_Users_Roles">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Industry">
+          <Key>
+            <PropertyRef Name="IndustryID" />
+          </Key>
+          <Property Name="IndustryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IndustryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IndustryDescription" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Machines" Relationship="GESModel.FK_Machine_Industry" FromRole="Industry" ToRole="Machine" />
+        </EntityType>
+        <EntityType Name="Machine">
+          <Key>
+            <PropertyRef Name="MachineID" />
+          </Key>
+          <Property Name="MachineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="MachineTypeID" Type="Int32" Nullable="false" />
+          <Property Name="ModelID" Type="Int32" />
+          <Property Name="IndustryID" Type="Int32" />
+          <Property Name="MachineDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="MachineGrade" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SerialNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Year" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Mileage" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Location" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ContactUserID" Type="Int32" />
+          <Property Name="CostPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SellPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="DateInserted" Type="DateTime" />
+          <Property Name="ContactPerson" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+          <Property Name="EmailAddress" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+          <Property Name="ContactNumber" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DealerMachine" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="ModelName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Industry" Relationship="GESModel.FK_Machine_Industry" FromRole="Machine" ToRole="Industry" />
+          <NavigationProperty Name="MachineType" Relationship="GESModel.FK_Machine_MachineType1" FromRole="Machine" ToRole="MachineType" />
+          <NavigationProperty Name="Manufacturer" Relationship="GESModel.FK_Machine_Manufacturer1" FromRole="Machine" ToRole="Manufacturer" />
+          <NavigationProperty Name="Photos" Relationship="GESModel.FK_MachineID" FromRole="Machine" ToRole="Photo" />
+        </EntityType>
+        <EntityType Name="MachineType">
+          <Key>
+            <PropertyRef Name="MachineTypeID" />
+          </Key>
+          <Property Name="MachineTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MachineTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MachineTypeDescription" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Machines" Relationship="GESModel.FK_Machine_MachineType1" FromRole="MachineType" ToRole="Machine" />
+        </EntityType>
+        <EntityType Name="MachineTypeIndustry">
+          <Key>
+            <PropertyRef Name="MachineTypeIndustryID" />
+          </Key>
+          <Property Name="MachineTypeIndustryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MachineTypeID" Type="Int32" Nullable="false" />
+          <Property Name="IndustryID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Manufacturer">
+          <Key>
+            <PropertyRef Name="ManufacturerID" />
+          </Key>
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ManufacturerName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ManufacturerDescription" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Machines" Relationship="GESModel.FK_Machine_Manufacturer1" FromRole="Manufacturer" ToRole="Machine" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="ModelID" />
+          </Key>
+          <Property Name="ModelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MachineTypeID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+          <Property Name="ModelName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModelDescription" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Photo">
+          <Key>
+            <PropertyRef Name="PhotoID" />
+          </Key>
+          <Property Name="PhotoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MachineID" Type="Int32" Nullable="false" />
+          <Property Name="PhotoName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PhotoDescription" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="PhotoUrl" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ShowThumbnail" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="MachinePhotoID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Machine" Relationship="GESModel.FK_MachineID" FromRole="Photo" ToRole="Machine" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Users" Relationship="GESModel.FK_Users_Roles" FromRole="Role" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Shantui">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Model" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OperatingWeight" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Engine" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Power" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Capacity" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TrackWidth" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BladeWidth" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DrumWidth" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PictureURL" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="MainPicture" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MainPictureOrder" Type="Int32" Nullable="false" />
+          <Property Name="SpecsheetURL" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Specification">
+          <Key>
+            <PropertyRef Name="SpecID" />
+          </Key>
+          <Property Name="SpecID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MachineID" Type="Int32" Nullable="false" />
+          <Property Name="SpecName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SpecDescription" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SpecUrl" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="MachineSpecID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vMachineTypeCount">
+          <Key>
+            <PropertyRef Name="MachineTypeID" />
+            <PropertyRef Name="Status" />
+          </Key>
+          <Property Name="MachineTypeName" Type="String" MaxLength="63" Unicode="true" FixedLength="false" />
+          <Property Name="MachineTypeID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vManufacturerCount">
+          <Key>
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="MachineTypeID" />
+          </Key>
+          <Property Name="ManufacturerName" Type="String" MaxLength="63" Unicode="true" FixedLength="false" />
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="MachineTypeID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vModelCount">
+          <Key>
+            <PropertyRef Name="ModelID" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="Status" />
+          </Key>
+          <Property Name="ModelName" Type="String" MaxLength="63" Unicode="true" FixedLength="false" />
+          <Property Name="ModelID" Type="Int32" Nullable="false" />
+          <Property Name="MachineTypeID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vShantuiProductList">
+          <Key>
+            <PropertyRef Name="MachineID" />
+            <PropertyRef Name="MachineGrade" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="MachineTypeName" />
+            <PropertyRef Name="IndustryName" />
+            <PropertyRef Name="ModelName" />
+            <PropertyRef Name="ManufacturerName" />
+            <PropertyRef Name="MachineTypeID" />
+          </Key>
+          <Property Name="MachineID" Type="Int32" Nullable="false" />
+          <Property Name="MachineGrade" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SerialNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Year" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Mileage" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Location" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SellPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="MachineTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IndustryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModelName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ManufacturerName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MachineDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="MachineTypeID" Type="Int32" Nullable="false" />
+          <Property Name="ModelID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="PhotoUrl" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vUsedMachineList">
+          <Key>
+            <PropertyRef Name="MachineID" />
+            <PropertyRef Name="MachineGrade" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="MachineTypeName" />
+            <PropertyRef Name="IndustryName" />
+            <PropertyRef Name="ManufacturerName" />
+            <PropertyRef Name="PhotoUrl" />
+            <PropertyRef Name="MachineTypeID" />
+          </Key>
+          <Property Name="MachineID" Type="Int32" Nullable="false" />
+          <Property Name="MachineGrade" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SerialNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Year" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Mileage" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Location" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SellPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="MachineTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IndustryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModelName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ManufacturerName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PhotoUrl" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="MachineDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="MachineTypeID" Type="Int32" Nullable="false" />
+          <Property Name="ModelID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Type="Int32" Name="IndustryID" />
+          <Property Type="DateTime" Name="DateInserted" />
+          <Property Type="String" Name="PhotoName" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Machine_Industry">
+          <End Role="Industry" Type="GESModel.Industry" Multiplicity="0..1" />
+          <End Role="Machine" Type="GESModel.Machine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Industry">
+              <PropertyRef Name="IndustryID" />
+            </Principal>
+            <Dependent Role="Machine">
+              <PropertyRef Name="IndustryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Machine_MachineType1">
+          <End Role="MachineType" Type="GESModel.MachineType" Multiplicity="1" />
+          <End Role="Machine" Type="GESModel.Machine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MachineType">
+              <PropertyRef Name="MachineTypeID" />
+            </Principal>
+            <Dependent Role="Machine">
+              <PropertyRef Name="MachineTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Machine_Manufacturer1">
+          <End Role="Manufacturer" Type="GESModel.Manufacturer" Multiplicity="0..1" />
+          <End Role="Machine" Type="GESModel.Machine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ManufacturerID" />
+            </Principal>
+            <Dependent Role="Machine">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MachineID">
+          <End Role="Machine" Type="GESModel.Machine" Multiplicity="1" />
+          <End Role="Photo" Type="GESModel.Photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Machine">
+              <PropertyRef Name="MachineID" />
+            </Principal>
+            <Dependent Role="Photo">
+              <PropertyRef Name="MachineID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Counter">
+          <Key>
+            <PropertyRef Name="RowNo" />
+          </Key>
+          <Property Type="Int32" Name="RowNo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CounterType" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="NumberOfHits" Nullable="false" />
+          <Property Type="String" Name="ExecutionPath" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DateInserted" />
+        </EntityType>
+        <EntityType Name="Enquiry">
+          <Key>
+            <PropertyRef Name="EnquiryID" />
+          </Key>
+          <Property Type="Int32" Name="EnquiryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="DateTime" Name="DateInserted" Nullable="false" />
+          <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="MachineID" Nullable="false" />
+          <Property Type="String" Name="Source" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Type="Int32" Name="UserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DisplayName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompanyName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Designation" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TelephoneNo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CellNo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FaxNo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AddrStreet1" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AddrStreet2" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AddrSuburb" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AddrCity" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AddrProvince" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AddrCode" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AddrCountry" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RoleID" Nullable="false" />
+          <Property Type="String" Name="Email" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Type="DateTime" Name="LatestLoggedInDate" />
+          <Property Type="Int32" Name="NumberOfLogins" />
+          <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Role" Relationship="GESModel.FK_Users_Roles" FromRole="User" ToRole="Role" />
+        </EntityType>
+        <Association Name="FK_Users_Roles">
+          <End Type="GESModel.Role" Role="Role" Multiplicity="1" />
+          <End Type="GESModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GESModelStoreContainer" CdmEntityContainer="GESEntities">
+          <EntitySetMapping Name="Industries"><EntityTypeMapping TypeName="GESModel.Industry"><MappingFragment StoreEntitySet="Industry">
+            <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+            <ScalarProperty Name="IndustryName" ColumnName="IndustryName" />
+            <ScalarProperty Name="IndustryDescription" ColumnName="IndustryDescription" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Machines"><EntityTypeMapping TypeName="GESModel.Machine"><MappingFragment StoreEntitySet="Machine">
+            <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+            <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+            <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+            <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+            <ScalarProperty Name="MachineDescription" ColumnName="MachineDescription" />
+            <ScalarProperty Name="MachineGrade" ColumnName="MachineGrade" />
+            <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+            <ScalarProperty Name="Location" ColumnName="Location" />
+            <ScalarProperty Name="ContactUserID" ColumnName="ContactUserID" />
+            <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+            <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="DateInserted" ColumnName="DateInserted" />
+            <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+            <ScalarProperty Name="DealerMachine" ColumnName="DealerMachine" />
+            <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MachineTypes"><EntityTypeMapping TypeName="GESModel.MachineType"><MappingFragment StoreEntitySet="MachineType">
+            <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+            <ScalarProperty Name="MachineTypeName" ColumnName="MachineTypeName" />
+            <ScalarProperty Name="MachineTypeDescription" ColumnName="MachineTypeDescription" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MachineTypeIndustries"><EntityTypeMapping TypeName="GESModel.MachineTypeIndustry"><MappingFragment StoreEntitySet="MachineTypeIndustry">
+            <ScalarProperty Name="MachineTypeIndustryID" ColumnName="MachineTypeIndustryID" />
+            <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+            <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Manufacturers"><EntityTypeMapping TypeName="GESModel.Manufacturer"><MappingFragment StoreEntitySet="Manufacturer">
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+            <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+            <ScalarProperty Name="ManufacturerDescription" ColumnName="ManufacturerDescription" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Models"><EntityTypeMapping TypeName="GESModel.Model"><MappingFragment StoreEntitySet="Model">
+            <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+            <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+            <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+            <ScalarProperty Name="ModelDescription" ColumnName="ModelDescription" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Photos"><EntityTypeMapping TypeName="GESModel.Photo"><MappingFragment StoreEntitySet="Photo">
+            <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
+            <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+            <ScalarProperty Name="PhotoName" ColumnName="PhotoName" />
+            <ScalarProperty Name="PhotoDescription" ColumnName="PhotoDescription" />
+            <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="ShowThumbnail" ColumnName="ShowThumbnail" />
+            <ScalarProperty Name="MachinePhotoID" ColumnName="MachinePhotoID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Roles"><EntityTypeMapping TypeName="GESModel.Role"><MappingFragment StoreEntitySet="Roles">
+            <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+            <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Shantuis"><EntityTypeMapping TypeName="GESModel.Shantui"><MappingFragment StoreEntitySet="Shantui">
+            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
+            <ScalarProperty Name="Model" ColumnName="Model" />
+            <ScalarProperty Name="OperatingWeight" ColumnName="OperatingWeight" />
+            <ScalarProperty Name="Engine" ColumnName="Engine" />
+            <ScalarProperty Name="Power" ColumnName="Power" />
+            <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+            <ScalarProperty Name="TrackWidth" ColumnName="TrackWidth" />
+            <ScalarProperty Name="BladeWidth" ColumnName="BladeWidth" />
+            <ScalarProperty Name="DrumWidth" ColumnName="DrumWidth" />
+            <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+            <ScalarProperty Name="MainPicture" ColumnName="MainPicture" />
+            <ScalarProperty Name="MainPictureOrder" ColumnName="MainPictureOrder" />
+            <ScalarProperty Name="SpecsheetURL" ColumnName="SpecsheetURL" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Specifications"><EntityTypeMapping TypeName="GESModel.Specification"><MappingFragment StoreEntitySet="Specification">
+            <ScalarProperty Name="SpecID" ColumnName="SpecID" />
+            <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+            <ScalarProperty Name="SpecName" ColumnName="SpecName" />
+            <ScalarProperty Name="SpecDescription" ColumnName="SpecDescription" />
+            <ScalarProperty Name="SpecUrl" ColumnName="SpecUrl" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="MachineSpecID" ColumnName="MachineSpecID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vMachineTypeCounts"><EntityTypeMapping TypeName="GESModel.vMachineTypeCount"><MappingFragment StoreEntitySet="vMachineTypeCount">
+            <ScalarProperty Name="MachineTypeName" ColumnName="MachineTypeName" />
+            <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vManufacturerCounts"><EntityTypeMapping TypeName="GESModel.vManufacturerCount"><MappingFragment StoreEntitySet="vManufacturerCount">
+            <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vModelCounts"><EntityTypeMapping TypeName="GESModel.vModelCount"><MappingFragment StoreEntitySet="vModelCount">
+            <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+            <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+            <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vShantuiProductLists"><EntityTypeMapping TypeName="GESModel.vShantuiProductList"><MappingFragment StoreEntitySet="vShantuiProductList">
+            <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+            <ScalarProperty Name="MachineGrade" ColumnName="MachineGrade" />
+            <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+            <ScalarProperty Name="Location" ColumnName="Location" />
+            <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="MachineTypeName" ColumnName="MachineTypeName" />
+            <ScalarProperty Name="IndustryName" ColumnName="IndustryName" />
+            <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+            <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+            <ScalarProperty Name="MachineDescription" ColumnName="MachineDescription" />
+            <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+            <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+            <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vUsedMachineLists"><EntityTypeMapping TypeName="GESModel.vUsedMachineList"><MappingFragment StoreEntitySet="vUsedMachineList">
+            <ScalarProperty Name="PhotoName" ColumnName="PhotoName" />
+                <ScalarProperty Name="DateInserted" ColumnName="DateInserted" />
+                <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+            <ScalarProperty Name="MachineGrade" ColumnName="MachineGrade" />
+            <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+            <ScalarProperty Name="Location" ColumnName="Location" />
+            <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="MachineTypeName" ColumnName="MachineTypeName" />
+            <ScalarProperty Name="IndustryName" ColumnName="IndustryName" />
+            <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+            <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+            <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+            <ScalarProperty Name="MachineDescription" ColumnName="MachineDescription" />
+            <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+            <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Counters">
+            <EntityTypeMapping TypeName="GESModel.Counter">
+              <MappingFragment StoreEntitySet="Counters">
+                <ScalarProperty Name="DateInserted" ColumnName="DateInserted" />
+                <ScalarProperty Name="ExecutionPath" ColumnName="ExecutionPath" />
+                <ScalarProperty Name="NumberOfHits" ColumnName="NumberOfHits" />
+                <ScalarProperty Name="CounterType" ColumnName="CounterType" />
+                <ScalarProperty Name="RowNo" ColumnName="RowNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Enquiries">
+            <EntityTypeMapping TypeName="GESModel.Enquiry">
+              <MappingFragment StoreEntitySet="Enquiries">
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="DateInserted" ColumnName="DateInserted" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="EnquiryID" ColumnName="EnquiryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="GESModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="NumberOfLogins" ColumnName="NumberOfLogins" />
+                <ScalarProperty Name="LatestLoggedInDate" ColumnName="LatestLoggedInDate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="AddrCountry" ColumnName="AddrCountry" />
+                <ScalarProperty Name="AddrCode" ColumnName="AddrCode" />
+                <ScalarProperty Name="AddrProvince" ColumnName="AddrProvince" />
+                <ScalarProperty Name="AddrCity" ColumnName="AddrCity" />
+                <ScalarProperty Name="AddrSuburb" ColumnName="AddrSuburb" />
+                <ScalarProperty Name="AddrStreet2" ColumnName="AddrStreet2" />
+                <ScalarProperty Name="AddrStreet1" ColumnName="AddrStreet1" />
+                <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+                <ScalarProperty Name="CellNo" ColumnName="CellNo" />
+                <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="GES" ZoomLevel="64">
+        <EntityTypeShape EntityType="GESModel.Industry" Width="1.5" PointX="0.75" PointY="4.125" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.Machine" Width="1.5" PointX="3" PointY="2.25" Height="5.8263151041666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.MachineType" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.MachineTypeIndustry" Width="1.5" PointX="2.75" PointY="8.875" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.Manufacturer" Width="1.5" PointX="0.75" PointY="7.5" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.Model" Width="1.5" PointX="7.75" PointY="4.875" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.Photo" Width="1.5" PointX="5.25" PointY="3.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.Role" Width="1.5" PointX="5.75" PointY="10.125" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.Shantui" Width="1.5" PointX="9.75" PointY="1.875" Height="3.9033007812500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.Specification" Width="1.5" PointX="0.75" PointY="11.875" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.vMachineTypeCount" Width="1.5" PointX="2.75" PointY="11.875" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.vManufacturerCount" Width="1.5" PointX="10.75" PointY="6.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.vModelCount" Width="1.5" PointX="10.75" PointY="9.875" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.vShantuiProductList" Width="1.5" PointX="4.75" PointY="12.875" Height="4.2879036458333371" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESModel.vUsedMachineList" Width="1.5" PointX="10.75" PointY="12.875" Height="4.2879036458333371" IsExpanded="true" />
+        <AssociationConnector Association="GESModel.FK_Machine_Industry" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.1151432291666667" />
+          <ConnectorPoint PointX="3" PointY="5.1151432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GESModel.FK_Machine_MachineType1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.4901432291666667" />
+          <ConnectorPoint PointX="3" PointY="2.4901432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GESModel.FK_Machine_Manufacturer1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.7881575520833328" />
+          <ConnectorPoint PointX="3" PointY="7.7881575520833328" />
+        </AssociationConnector>
+        <AssociationConnector Association="GESModel.FK_MachineID" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="5.12474609375" />
+          <ConnectorPoint PointX="5.25" PointY="5.12474609375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="GESModel.Counter" Width="1.5" PointX="12.375" PointY="0.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="GESModel.Enquiry" Width="1.5" PointX="5.375" PointY="0.75" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="GESModel.User" Width="1.5" PointX="8" PointY="8.125" Height="5.634013671874996" />
+        <AssociationConnector Association="GESModel.FK_Users_Roles" >
+          <ConnectorPoint PointX="7.25" PointY="10.922841796875" />
+          <ConnectorPoint PointX="8" PointY="10.922841796875" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
