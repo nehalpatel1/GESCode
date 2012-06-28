@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>images/cummins-engine-parts.jpg</ImageUrl>
+    <AlternateText>cummins-engine-parts</AlternateText>
+    <Keyword>cummins-engine-parts</Keyword>
+    <Caption>cummins-engine-parts</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>images/cummins-engine.jpg</ImageUrl>
+    <AlternateText>cummins-engine</AlternateText>
+    <Keyword>cummins-engine</Keyword>
+    <Caption>cummins-engine</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>images/cummins-generator.jpg</ImageUrl>
+    <AlternateText>cummins-generator</AlternateText>
+    <Keyword>cummins-generator</Keyword>
+    <Caption>cummins-generator</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>images/cummins-Injection-Pump.jpg</ImageUrl>
+    <AlternateText>cummins-Injection-Pump</AlternateText>
+    <Keyword>cummins-Injection-Pump</Keyword>
+    <Caption>cummins-Injection-Pump</Caption>
+  </Ad>
+</Advertisements>

@@ -1,0 +1,20 @@
+C:\Code\Sample\HelloGES\bin\HelloGES.dll
+C:\Code\Sample\HelloGES\bin\HelloGES.pdb
+C:\Code\Sample\HelloGES\bin\AdWords.dll
+C:\Code\Sample\HelloGES\bin\Aurigma.ImageUploader.dll
+C:\Code\Sample\HelloGES\bin\AdWords.pdb
+C:\Code\Sample\HelloGES\obj\Release\ResolveAssemblyReference.cache
+C:\Code\Sample\HelloGES\obj\Release\RdlCompile.cache
+C:\Code\Sample\HelloGES\obj\Release\RdlCompile.compiled
+C:\Code\Sample\HelloGES\obj\Release\HelloGES.dll
+C:\Code\Sample\HelloGES\obj\Release\HelloGES.pdb
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\bin\HelloGES.dll
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\bin\HelloGES.pdb
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\bin\AdWords.dll
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\bin\Aurigma.ImageUploader.dll
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\bin\AdWords.pdb
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\obj\Release\RdlCompile.cache
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\obj\Release\RdlCompile.compiled
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\obj\Release\HelloGES.dll
+C:\Users\Graham\Dropbox\My Stuff\Code\Sample\HelloGES\obj\Release\HelloGES.pdb

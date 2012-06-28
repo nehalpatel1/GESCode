@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GESModelStoreContainer" CdmEntityContainer="GESEntities">
+    <EntitySetMapping Name="Industries">
+      <EntityTypeMapping TypeName="GESModel.Industry">
+        <MappingFragment StoreEntitySet="Industry">
+          <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+          <ScalarProperty Name="IndustryName" ColumnName="IndustryName" />
+          <ScalarProperty Name="IndustryDescription" ColumnName="IndustryDescription" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Machines">
+      <EntityTypeMapping TypeName="GESModel.Machine">
+        <MappingFragment StoreEntitySet="Machine">
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+          <ScalarProperty Name="MachineDescription" ColumnName="MachineDescription" />
+          <ScalarProperty Name="MachineGrade" ColumnName="MachineGrade" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ContactUserID" ColumnName="ContactUserID" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateInserted" ColumnName="DateInserted" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="DealerMachine" ColumnName="DealerMachine" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MachineTypes">
+      <EntityTypeMapping TypeName="GESModel.MachineType">
+        <MappingFragment StoreEntitySet="MachineType">
+          <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+          <ScalarProperty Name="MachineTypeName" ColumnName="MachineTypeName" />
+          <ScalarProperty Name="MachineTypeDescription" ColumnName="MachineTypeDescription" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MachineTypeIndustries">
+      <EntityTypeMapping TypeName="GESModel.MachineTypeIndustry">
+        <MappingFragment StoreEntitySet="MachineTypeIndustry">
+          <ScalarProperty Name="MachineTypeIndustryID" ColumnName="MachineTypeIndustryID" />
+          <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+          <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturers">
+      <EntityTypeMapping TypeName="GESModel.Manufacturer">
+        <MappingFragment StoreEntitySet="Manufacturer">
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="ManufacturerDescription" ColumnName="ManufacturerDescription" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="GESModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="ModelDescription" ColumnName="ModelDescription" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="GESModel.Photo">
+        <MappingFragment StoreEntitySet="Photo">
+          <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="PhotoName" ColumnName="PhotoName" />
+          <ScalarProperty Name="PhotoDescription" ColumnName="PhotoDescription" />
+          <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShowThumbnail" ColumnName="ShowThumbnail" />
+          <ScalarProperty Name="MachinePhotoID" ColumnName="MachinePhotoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="GESModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shantuis">
+      <EntityTypeMapping TypeName="GESModel.Shantui">
+        <MappingFragment StoreEntitySet="Shantui">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="OperatingWeight" ColumnName="OperatingWeight" />
+          <ScalarProperty Name="Engine" ColumnName="Engine" />
+          <ScalarProperty Name="Power" ColumnName="Power" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="TrackWidth" ColumnName="TrackWidth" />
+          <ScalarProperty Name="BladeWidth" ColumnName="BladeWidth" />
+          <ScalarProperty Name="DrumWidth" ColumnName="DrumWidth" />
+          <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+          <ScalarProperty Name="MainPicture" ColumnName="MainPicture" />
+          <ScalarProperty Name="MainPictureOrder" ColumnName="MainPictureOrder" />
+          <ScalarProperty Name="SpecsheetURL" ColumnName="SpecsheetURL" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specifications">
+      <EntityTypeMapping TypeName="GESModel.Specification">
+        <MappingFragment StoreEntitySet="Specification">
+          <ScalarProperty Name="SpecID" ColumnName="SpecID" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="SpecName" ColumnName="SpecName" />
+          <ScalarProperty Name="SpecDescription" ColumnName="SpecDescription" />
+          <ScalarProperty Name="SpecUrl" ColumnName="SpecUrl" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MachineSpecID" ColumnName="MachineSpecID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vMachineTypeCounts">
+      <EntityTypeMapping TypeName="GESModel.vMachineTypeCount">
+        <MappingFragment StoreEntitySet="vMachineTypeCount">
+          <ScalarProperty Name="MachineTypeName" ColumnName="MachineTypeName" />
+          <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vManufacturerCounts">
+      <EntityTypeMapping TypeName="GESModel.vManufacturerCount">
+        <MappingFragment StoreEntitySet="vManufacturerCount">
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vModelCounts">
+      <EntityTypeMapping TypeName="GESModel.vModelCount">
+        <MappingFragment StoreEntitySet="vModelCount">
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vShantuiProductLists">
+      <EntityTypeMapping TypeName="GESModel.vShantuiProductList">
+        <MappingFragment StoreEntitySet="vShantuiProductList">
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="MachineGrade" ColumnName="MachineGrade" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MachineTypeName" ColumnName="MachineTypeName" />
+          <ScalarProperty Name="IndustryName" ColumnName="IndustryName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="MachineDescription" ColumnName="MachineDescription" />
+          <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vUsedMachineLists">
+      <EntityTypeMapping TypeName="GESModel.vUsedMachineList">
+        <MappingFragment StoreEntitySet="vUsedMachineList">
+          <ScalarProperty Name="PhotoName" ColumnName="PhotoName" />
+          <ScalarProperty Name="DateInserted" ColumnName="DateInserted" />
+          <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="MachineGrade" ColumnName="MachineGrade" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MachineTypeName" ColumnName="MachineTypeName" />
+          <ScalarProperty Name="IndustryName" ColumnName="IndustryName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+          <ScalarProperty Name="MachineDescription" ColumnName="MachineDescription" />
+          <ScalarProperty Name="MachineTypeID" ColumnName="MachineTypeID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Counters">
+      <EntityTypeMapping TypeName="GESModel.Counter">
+        <MappingFragment StoreEntitySet="Counters">
+          <ScalarProperty Name="DateInserted" ColumnName="DateInserted" />
+          <ScalarProperty Name="ExecutionPath" ColumnName="ExecutionPath" />
+          <ScalarProperty Name="NumberOfHits" ColumnName="NumberOfHits" />
+          <ScalarProperty Name="CounterType" ColumnName="CounterType" />
+          <ScalarProperty Name="RowNo" ColumnName="RowNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enquiries">
+      <EntityTypeMapping TypeName="GESModel.Enquiry">
+        <MappingFragment StoreEntitySet="Enquiries">
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DateInserted" ColumnName="DateInserted" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EnquiryID" ColumnName="EnquiryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="GESModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="NumberOfLogins" ColumnName="NumberOfLogins" />
+          <ScalarProperty Name="LatestLoggedInDate" ColumnName="LatestLoggedInDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="AddrCountry" ColumnName="AddrCountry" />
+          <ScalarProperty Name="AddrCode" ColumnName="AddrCode" />
+          <ScalarProperty Name="AddrProvince" ColumnName="AddrProvince" />
+          <ScalarProperty Name="AddrCity" ColumnName="AddrCity" />
+          <ScalarProperty Name="AddrSuburb" ColumnName="AddrSuburb" />
+          <ScalarProperty Name="AddrStreet2" ColumnName="AddrStreet2" />
+          <ScalarProperty Name="AddrStreet1" ColumnName="AddrStreet1" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="CellNo" ColumnName="CellNo" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

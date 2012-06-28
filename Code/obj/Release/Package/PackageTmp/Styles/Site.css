@@ -1,0 +1,242 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background: #000000;
+    font-size: 0.8em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1
+{
+	text-transform: none;
+	margin-bottom: 0px;
+    font-variant: normal;
+    clear: both;
+    background: #494949;
+    color: #D8D8D8;
+    padding: 7px 0 7px 5px;
+    font-weight: bold;
+    font-size: 1em;
+}
+    
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.main
+{
+    background-color: white;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+div.defaultpage
+{
+    border-style: none;
+    background-color: #000000; /*margin: 12px 8px 8px 8px;*/
+    min-height: 420px;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #494949;
+    width: 100%;
+}
+
+div.menu
+{
+	padding: 4px 0px 4px 8px;
+	font-size: 1em;
+}
+
+div.menu ul
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #494949;
+    border: 1px #494949 solid;
+    color: #D8D8D8;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+div.menu ul li a:hover
+{
+	background-color: #494949;
+	color: #D8D8D8;
+	text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+	background-color: #494949;
+	color: #D8D8D8;
+	text-decoration: none;
+}
+
+div.menuheading
+{
+    height: 10%;
+    background-color: #DC4903;
+    color: #D8D8D8;
+    text-transform: none;
+    margin-bottom: 0px;
+    font-variant: normal;
+    clear: both;
+    padding: 7px 0 7px 5px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+div.productsidebar
+{
+    float:left;
+    width:20%; 
+    height:100%;
+}
+
+div.productcontentarea
+{
+    float:left; 
+    width:79%; 
+    height:100%;
+}    
+    
+div.productsidebarmenu
+{
+    height:80%; 
+    width:100%; 
+    background-color: #494949;
+}
+
+div.productmenu
+{
+	padding: 4px 0px 4px 8px;
+	font-size: 1em;
+}
+
+div.productmenu ul
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+div.productmenu ul li a, div.productmenu ul li a:visited
+{
+    background-color: #494949;
+    border: 1px #494949 solid;
+    color: #D8D8D8;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #494949;
+}
+
+div.productmenu ul li a:hover
+{
+	background-color: #494949;
+	color: #D8D8D8;
+	text-decoration: none;
+}
+
+div.productmenu ul li a:active
+{
+	background-color: #494949;
+	color: #D8D8D8;
+	text-decoration: none;
+}
+
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+	clear: both;
+}
+
+.title
+{
+	display: block;
+	float: left;
+	text-align: left;
+	width: auto;
+}
+
+.loginDisplay
+{
+	font-size: 1em;
+	display: block;
+	text-align: right;
+	padding: 10px;
+	color: White;
+}
+
+.photo_small
+{
+    border-bottom : #D8D8D8 1px solid;
+    border-left : #D8D8D8 1px solid;
+    border-top : #D8D8D8 1px solid;
+    border-right : #D8D8D8 1px solid;
+    max-width : 120px;
+    height : 90px;
+}
+
+
+.photo_big
+{
+    border-bottom : #D8D8D8 1px solid;
+    border-left : #D8D8D8 1px solid;
+    max-width : 480px;
+    height : 360px;
+    border-top : #D8D8D8 1px solid;
+    border-right : #D8D8D8 1px solid;
+    
+}
+
+.ui-state-default A:link
+{
+    color : #DC4903;
+}
+
+.btnSubmit
+{
+    height: 28px; 
+    background-image: url(images/skin/btn_bg.gif); 
+    background-repeat: repeat; 
+    background-color: #DC4903; 
+    border: solid 1px #DC4903; 
+    border-collapse:collapse; 
+    border-spacing: 0px; 
+    color: #D8D8D8; 
+    cursor: pointer; 
+    font-weight: bolder; 
+    font-size: 13px; 
+    margin: 0; 
+}

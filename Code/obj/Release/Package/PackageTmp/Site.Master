@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HelloGES.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/lightbox.css" rel="stylesheet" type="text/css" media="screen" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style4
+        {
+            width: 222px;
+            height: 53px;
+        }
+        .style5
+        {
+            width: 258px;
+            height: 62px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div>
+        <div class="header">
+            <table style="width: 100%;" bgcolor="Black">
+                <tr>
+                    <td style="width: 20%;">
+                        <div>
+                            <a href='Default.aspx'> 
+                                <asp:Image ID="Image3" runat="server" style="width: 285px; height: 94px" 
+                                ImageUrl="/Images/GES_New.jpg" BorderStyle="None"/>
+                            </a>
+                        </div>
+                    </td>
+                    <td style="width: 70%;"align="center">
+                        <div style="vertical-align: middle">
+                            <!--
+
+                            <script type="text/javascript"><!--
+                                google_ad_client = "ca-pub-5301521664138295";
+                                /* TLB for Sale */
+                                google_ad_slot = "1581120256";
+                                google_ad_width = 728;
+                                google_ad_height = 90;
+                            //-->
+                            <!--
+                            </script>
+                            <script type="text/javascript"
+                            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                            </script>
+                            -->       
+                                                                             
+                                   
+                            <a href="Enquire.aspx?machineID=0&source=equipment-to-sell"> 
+                                <asp:Image ID="imgSeptember" runat="server" style="width: 728px; height: 90px;"
+                                ImageUrl="~/BannerPics/Buy-Sell-Equipment.gif" BorderStyle="None"
+                                AlternateText="Looking to Buy or Sell equipment?" />
+                            </a>
+
+                            <!--
+                            <a href="PromotionManagement/Shantui/shantui-forklift-promotion.aspx"> 
+                                <asp:Image ID="imgBanner" runat="server" style="width: 728px; height: 90px;"
+                                ImageUrl="/BannerPics/August-Banner.gif" BorderStyle="None"/>
+                            </a>
+                            <a href='Shantui.aspx'> 
+                                <asp:Image ID="Image1" runat="server" class="style4" 
+                                ImageUrl="/Images/Shantui1.jpg" BorderStyle="None"/>
+                            </a>
+                            <a href='ShantuiList.aspx?Category=Bulldozers'> 
+                                <asp:Image ID="Image2" runat="server" class="style5" 
+                                ImageUrl="/Images/Shantui2.jpg" BorderStyle="None"/>
+                            </a>
+                            >
+                            -->
+                        </div>
+                    </td>
+                    <td style="width: 29%; text-align: right;">
+                        Counter : <asp:label id="lblTotalNumberOfUsers" runat="server"></asp:label><br />
+                        Online : <asp:label id="lblCurrentNumberOfUsers" runat="server"></asp:label><br />
+                        <div class="loginDisplay">
+                            <asp:LoginView ID="HeadLoginView" runat="server">
+                                <AnonymousTemplate>
+                                    <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server" 
+                                        style="color: #D8D8D8">Login</a> 
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" />
+                                    <br>
+                                    </br>
+                                    <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" style="color: #D8D8D8" LogoutPageUrl="~/"/>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/Shantui.aspx" Text="Shantui"/>
+                        <asp:MenuItem NavigateUrl="~/UsedEquipment.aspx" Text="Used Equipment"/>
+                        <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="Contact Us"/>
+                        <asp:MenuItem NavigateUrl="~/MyQuip.aspx" Text="My Quip"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    </form>
+</body>
+</html>
