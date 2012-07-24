@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HelloGES.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Equipment Junction</title>
+    <link href="Styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/allinone_carousel.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/ga.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.js" type="text/javascript"></script>
+    <script src="Scripts/allinone_carousel.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="bodyborder">
+    <form id="form1" runat="server" accept="myform">
+    <div class="header">
+        <div class="container">
+            <div class="logo l">
+                <a href="#">
+                    <img src="Images/equipmentjunction-logo.jpg" width="362" height="57" alt="" /></a></div>
+            <div class="toplinks r">
+                <div class="nav r">
+                    <ul>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">How do credits work?</a></li>
+                        <li class="last"><a href="#" class="last">Refer a friend</a></li>
+                    </ul>
+                </div>
+                <div class="c">
+                </div>
+                <div class="signin r">
+                    <a href="#"><span>Sign in to </span><span class="yellow">My</span><span>Junction</span>
+                    </a>
+                </div>
+                <div class="c">
+                </div>
+            </div>
+            <div class="c">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="ftop">
+                <div class="fbox">
+                    <h1>
+                        Buying</h1>
+                    <ul>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Hire</a></li>
+                        <li><a href="#">Parts</a></li>
+                        <li><a href="#">Post a wanted ad</a></li>
+                    </ul>
+                </div>
+                <div class="fbox">
+                    <h1>
+                        Selling</h1>
+                    <ul>
+                        <li><a href="#">List an ad</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="fbox">
+                    <h1>
+                        Services</h1>
+                    <ul>
+                        <li><a href="#">Transport</a></li>
+                        <li><a href="#">Asessments</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="fbox">
+                    <h1>
+                        Community</h1>
+                    <ul>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="subscribe">
+                    <h1>
+                        Get the latest Equipment news in your inbox.</h1>
+                    <p>
+                        Please enter your email address below and click ‘Subscribe’.</p>
+                    <input name="subscribe" type="text" class="subscribebox" value="revees.graham@gmail.com" />
+                    <a href="#" class="common_btns">Subscribe</a>
+                </div>
+                <div class="c">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerc">
+        <div class="container">
+            <div class="copy l">
+                <div class="fnav">
+                    <ul>
+                        <li><a href="#" style="margin-left: 0;">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">PAIA</a></li>
+                        <li class="last"><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                &copy; 2012 Equipment Junction, All Rights Reserved</div>
+            <div class="payment r">
+                <ul>
+                    <li><a href="#">
+                        <img alt="" src="Images/monsterpay.png" /></a></li>
+                    <li><a href="#">
+                        <img alt="" src="Images/mastercard.png" /></a></li>
+                    <li><a href="#">
+                        <img alt="" src="Images/visa.png" /></a></li>
+                </ul>
+            </div>
+            <div class="c">
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

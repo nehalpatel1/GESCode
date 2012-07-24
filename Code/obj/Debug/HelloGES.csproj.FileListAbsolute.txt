@@ -27,3 +27,11 @@ E:\Projects\GES Code\obj\Debug\RdlCompile.cache
 E:\Projects\GES Code\obj\Debug\RdlCompile.compiled
 E:\Projects\GES Code\obj\Debug\HelloGES.dll
 E:\Projects\GES Code\obj\Debug\HelloGES.pdb
+E:\Projects\GESCode\Code\bin\HelloGES.dll
+E:\Projects\GESCode\Code\bin\HelloGES.pdb
+E:\Projects\GESCode\Code\bin\Aurigma.ImageUploader.dll
+E:\Projects\GESCode\Code\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\GESCode\Code\obj\Debug\RdlCompile.cache
+E:\Projects\GESCode\Code\obj\Debug\RdlCompile.compiled
+E:\Projects\GESCode\Code\obj\Debug\HelloGES.dll
+E:\Projects\GESCode\Code\obj\Debug\HelloGES.pdb

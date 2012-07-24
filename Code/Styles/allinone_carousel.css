@@ -1,0 +1,161 @@
+/*
+skins available:
+	- sweet
+	- powerful
+	- charming
+*/
+
+/* the container */
+.allinone_carousel {
+	position:relative;
+}
+
+.allinone_carousel_list {
+	margin:0;
+	padding:0;
+	list-style:none;
+	display:none;
+}
+
+.allinone_carousel .contentHolder {
+	position:relative;
+	overflow:hidden;
+	height:251px !important;
+}
+
+
+
+
+/***sweet SKIN***/
+
+.allinone_carousel.sweet .contentHolderUnit {
+	position:absolute;
+	width:280px;
+	height:210px;
+	overflow:hidden;
+	cursor: pointer;
+	padding:4px;
+	border:1px solid #DCDCDC;
+	background:#FFFFFF;
+}
+
+
+.allinone_carousel.sweet .elementTitle {
+	position:absolute;
+	left:0;
+	top:0px;
+	width:100%;
+	text-align:center;
+	font: bold 14px Arial, Helvetica, sans-serif;
+	color:#4C4C4C;
+	text-transform:capitalize;
+}
+/*.allinone_carousel.sweet .playOver {
+	position:absolute;
+	width:100px;
+	height:70px;
+	margin-top:-15px;
+	background:url(../images/play_overOFF.png) 0 0 no-repeat;
+	display:none;
+	z-index:200;
+	cursor: pointer;
+}
+
+.allinone_carousel.sweet .playOver:hover {
+	background:url(../images/play_overON.png) 0 0 no-repeat;
+	display:none;
+	z-index:200;
+	cursor: pointer;
+}*/
+
+.allinone_carousel.sweet .bannerControls {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:101;
+	width:100%;
+}
+
+/*.allinone_carousel.sweet .leftNav {
+	position:absolute;
+	left:-5px;
+	margin-top:20px; 
+	width:18px;
+	height:26px;
+	background:url(../images/leftNavOFF.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+.allinone_carousel.sweet .leftNav:hover {
+	background:url(../images/leftNavON.png) 0 0 no-repeat;
+}
+.allinone_carousel.sweet .rightNav {
+	position:absolute;
+	right:-5px;
+	margin-top:20px; 
+	width:18px;
+	height:26px;
+	background:url(../images/rightNavOFF.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+.allinone_carousel.sweet .rightNav:hover {
+	background:url(../images/rightNavON.png) 0 0 no-repeat;
+}*/
+.allinone_carousel.sweet .bottomNav {
+	position:absolute;
+	height:10px;
+	width:0;
+	padding-left:9px;
+	bottom:-30px;
+	z-index:140;
+}
+.allinone_carousel.sweet .bottomNavButtonOFF {
+	float:left;
+	display:block;
+	width:10px;
+	height:10px;
+	background:url(../images/bottomNavOFF.png) 0 0 no-repeat;
+	padding-left:9px;
+	cursor: pointer;
+}
+
+.allinone_carousel.sweet .bottomNavButtonON {
+	float:left;
+	display:block;
+	width:10px;
+	height:10px;
+	padding-left:9px;
+	background:url(../images/bottomNavON.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+
+/*.allinone_carousel.sweet .bottomNavLeft {
+	position:absolute;
+	width:63px;
+	height:35px;
+	bottom:-10px;
+	z-index:140;
+}
+.allinone_carousel.sweet .bottomNavRight {
+	position:absolute;
+	width:63px;
+	height:35px;
+	bottom:-10px;
+	z-index:140;
+}
+
+.allinone_carousel.sweet .bottomOverThumb {
+	position:absolute;
+	width:88px;
+	height:106px;
+	background:url(../images/bottomOverThumbBg.png) 23px bottom no-repeat;
+	bottom:27px;
+	margin-left:-25px;
+}
+.allinone_carousel.sweet .bottomOverThumb img {
+	border:4px solid #FFFFFF;
+}
+*/
+
+
+
+

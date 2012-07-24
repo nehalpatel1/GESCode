@@ -103,6 +103,53 @@
     <Content Include="AddUsedEquipment_Page1.aspx" />
     <Content Include="AddUsedEquipment_Page2.aspx" />
     <Content Include="AddUsedEquipment_Page3.aspx" />
+    <Content Include="Images\banner1.jpg" />
+    <Content Include="Images\banner2.jpg" />
+    <Content Include="Images\banner3.jpg" />
+    <Content Include="Images\banner4.jpg" />
+    <Content Include="Images\banner5.jpg" />
+    <Content Include="Images\bottomNavOFF.png" />
+    <Content Include="Images\bottomNavON.png" />
+    <Content Include="Images\btn_bbg.jpg" />
+    <Content Include="Images\btn_bbg_h.jpg" />
+    <Content Include="Images\btn_sbg.jpg" />
+    <Content Include="Images\btn_sbg_h.jpg" />
+    <Content Include="Images\ec_minus.png" />
+    <Content Include="Images\ec_plus.png" />
+    <Content Include="Images\email_alert_ad.jpg" />
+    <Content Include="Images\empty.gif" />
+    <Content Include="Images\equipmentjunction-logo.jpg" />
+    <Content Include="Images\footer_sep.jpg" />
+    <Content Include="Images\glace.png" />
+    <Content Include="Images\leftNavOFF.png" />
+    <Content Include="Images\leftNavON.png" />
+    <Content Include="Images\list-dealer1.jpg" />
+    <Content Include="Images\list-thumb1.jpg" />
+    <Content Include="Images\listing_item_bbg.jpg" />
+    <Content Include="Images\mastercard.png" />
+    <Content Include="Images\monsterpay.png" />
+    <Content Include="Images\nav_left.jpg" />
+    <Content Include="Images\nav_left_h.jpg" />
+    <Content Include="Images\nav_right.jpg" />
+    <Content Include="Images\nav_right_h.jpg" />
+    <Content Include="Images\nav_sep_bottom.png" />
+    <Content Include="Images\nav_sep_top.png" />
+    <Content Include="Images\need_equp_ad.jpg" />
+    <Content Include="Images\need_sell_ad.jpg" />
+    <Content Include="Images\rightNavOFF.png" />
+    <Content Include="Images\rightNavON.png" />
+    <Content Include="Images\search-listing-ad.jpg" />
+    <Content Include="Images\search_bg.jpg" />
+    <Content Include="Images\signin_bg.jpg" />
+    <Content Include="Images\star_0.png" />
+    <Content Include="Images\star_1.png" />
+    <Content Include="Images\star_2.png" />
+    <Content Include="Images\star_3.png" />
+    <Content Include="Images\star_4.png" />
+    <Content Include="Images\star_5.png" />
+    <Content Include="Images\user_icon.png" />
+    <Content Include="Images\video_icon.png" />
+    <Content Include="Images\visa.png" />
     <Content Include="ReportViewerCounterList.aspx" />
     <Content Include="Enquire.aspx" />
     <Content Include="EnquiryConfirmation.aspx" />
@@ -196,6 +243,14 @@
     <Content Include="PromotionManagement\Shantui\promo.css" />
     <Content Include="PromotionManagement\Shantui\shantui-forklift-promotion.aspx" />
     <Content Include="ReportViewer.aspx" />
+    <Content Include="Scripts\allinone_carousel.js" />
+    <Content Include="Scripts\ga.js" />
+    <Content Include="Scripts\jquery-1.js" />
+    <Content Include="Scripts\jquery-ui-1.js" />
+    <Content Include="Scripts\jquery.collapse.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\lightbox\builder.js" />
     <Content Include="Scripts\lightbox\bullet.gif" />
     <Content Include="Scripts\lightbox\close.gif" />
@@ -234,6 +289,7 @@
     <Content Include="ShantuiPics\WheelLoader\SL50W.jpg" />
     <Content Include="ShantuiPics\WheelLoader\SL60W.jpg" />
     <Content Include="sitemap.aspx" />
+    <Content Include="Styles\allinone_carousel.css" />
     <Content Include="Styles\lightbox.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -241,6 +297,7 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\style.css" />
     <Content Include="UsedEquipment.aspx" />
     <Content Include="UsedEquipmentDetail.aspx" />
     <Content Include="Web.config">
@@ -499,6 +556,13 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
     <Compile Include="sitemap.aspx.cs">
       <DependentUpon>sitemap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -590,6 +654,7 @@
     <None Include="ShantuiPics\Rollers\SR19P.pdf" />
     <None Include="ShantuiPics\Rollers\SR26T.pdf" />
     <None Include="ShantuiPics\WheelLoader\WheelLoader.pdf" />
+    <Content Include="Site1.Master" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reports\CounterList.rdlc" />
